@@ -1,0 +1,24 @@
+---
+interface Props {
+  name: string;
+  label: string;
+  required?: boolean;
+  class?: string;
+}
+
+const { name, label, required = false, class: className = '' } = Astro.props;
+---
+
+<div class={`mb-4 flex items-start min-h-[44px] ${className}`}>
+  <input
+    type="checkbox"
+    id={name}
+    name={name}
+    required={required}
+    class="mt-1 w-5 h-5 bg-slate-900 border-slate-700 rounded text-igt-cyan focus:ring-igt-cyan cursor-pointer"
+  />
+  <label for={name} class="ml-3 text-sm text-slate-300 cursor-pointer py-1">
+    {label}
+    {required && <span class="text-igt-cyan">*</span>}
+  </label>
+</div>

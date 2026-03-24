@@ -1,0 +1,165 @@
+---
+import Header from '../components/layout/Header.astro';
+import MobileNav from '../components/layout/MobileNav.astro';
+import Footer from '../components/layout/Footer.astro';
+import '../styles/fonts.css';
+import '../styles/global.css';
+import '../styles/animations.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  class?: string;
+  canonicalPath?: string;
+  ogImage?: string;
+}
+
+const { 
+  title, 
+  description = 'Iron Gate Technologies: American-made AI-powered security solutions. Portable surveillance, access control, and autonomous security systems.',
+  class: className = '',
+  canonicalPath,
+  ogImage = '/images/homepage/hero-camera.webp'
+} = Astro.props;
+
+const siteUrl = 'https://irongate.world';
+const siteName = 'ES Iron Gate Technologies';
+const canonicalUrl = canonicalPath ? `${siteUrl}${canonicalPath}` : `${siteUrl}${Astro.url.pathname}`;
+const fullOgImage = `${siteUrl}${ogImage}`;
+const pageTitle = title === 'Home' ? `${siteName} | American-Made AI Security Solutions` : `${title} | ${siteName}`;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4L8JPWEPKE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4L8JPWEPKE');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vcstzfedqq");
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{pageTitle}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
+        <!-- SEO: Canonical -->
+  <link rel="canonical" href={canonicalUrl} />
+  <!-- SEO: Open Graph -->
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={fullOgImage} />
+  <meta property="og:site_name" content={siteName} />
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={fullOgImage} />
+  
+  <!-- Self-hosted fonts (preload critical weights) -->
+  <link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/ibm-plex-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <!-- DNS prefetch for analytics -->
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="//www.clarity.ms" />
+  
+  <!-- Canonical Organization schema (site-wide) -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://irongate.world/#organization",
+    "name": "ES Iron Gate Technologies LLC",
+    "alternateName": "Iron Gate Technologies",
+    "url": "https://irongate.world",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://irongate.world/logo.webp",
+      "width": 200,
+      "height": 200
+    },
+    "image": "https://irongate.world/logo.webp",
+    "description": "American-made AI-powered security and surveillance systems. Designed, engineered, and manufactured in Holly Hill, Florida. Products include portable surveillance units, marine security, access control, autonomous patrol robots, and tactical aerial systems.",
+    "telephone": "904-896-5618",
+    "email": "ats@irongate.world",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "232 Carswell Ave",
+      "addressLocality": "Holly Hill",
+      "addressRegion": "FL",
+      "postalCode": "32117",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "sameAs": [],
+    "knowsAbout": [
+      "AI-powered surveillance",
+      "portable security systems",
+      "gun detection technology",
+      "marine security",
+      "access control systems",
+      "autonomous patrol robots",
+      "construction site security",
+      "solar-powered surveillance"
+    ],
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": 5,
+      "maxValue": 15
+    },
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Holly Hill, Florida"
+    },
+    "slogan": "In God We Trust. All Others We Track.\u2122"
+  }
+  </script>
+  <!-- Canonical WebSite schema (site-wide) -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://irongate.world/#website",
+    "name": "Iron Gate Technologies",
+    "url": "https://irongate.world",
+    "publisher": {
+      "@id": "https://irongate.world/#organization"
+    }
+  }
+  </script>
+  <!-- Page-specific head content (JSON-LD, etc.) -->
+  <slot name="head" />
+</head>
+<body class={className}>
+  <!-- Skip to main content link (visible on focus for keyboard users) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <Header />
+  <MobileNav />
+  
+  <main id="main-content">
+    <slot />
+  </main>
+  
+  <Footer />
+  <script src="../scripts/animations.js"></script>
+  <script src="../scripts/analytics-events.js" defer></script>
+</body>
+</html>

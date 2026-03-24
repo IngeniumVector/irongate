@@ -1,0 +1,14 @@
+---
+interface Props {
+  class?: string;
+  fullWidth?: boolean;
+}
+
+const { class: className = '', fullWidth = false } = Astro.props;
+---
+
+<section class={`py-16 md:py-24 ${className}`}>
+  <div class={fullWidth ? 'w-full' : 'container mx-auto px-4 md:px-6 max-w-7xl'}>
+    <slot />
+  </div>
+</section>

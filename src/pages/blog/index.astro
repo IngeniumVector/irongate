@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/layout/Hero.astro';
+import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
+
+// Blog post data - add new posts here
+const posts = [
+  {
+    slug: '002-marina-security-cameras',
+    title: 'Marina Security: The Blind Spot Nobody Talks About',
+    excerpt: 'Marinas protect billions in assets with parking-lot security. Learn why standard cameras fail on water and how purpose-built marine surveillance solves it.',
+    category: 'Industry',
+    date: '2026-03-20',
+    readTime: '5 min read',
+  },
+  {
+    slug: '001-american-made-security',
+    title: 'Why American-Made Security Cameras Change the Equation',
+    excerpt: 'When your security camera fails at 2 AM, the question is whether the person who answers can actually fix the problem. That distinction starts with where the hardware is built.',
+    category: 'American-Made Security',
+    date: '2026-03-12',
+    readTime: '6 min read',
+  },
+];
+
+// Sort by slug descending (newest first)
+const sortedPosts = posts.sort((a, b) => b.slug.localeCompare(a.slug));
+---
+
+<BaseLayout
+  title="Blog"
+  description="Insights on security technology, surveillance best practices, and American manufacturing from the Iron Gate Technologies engineering team."
+>
+  <Hero
+    variant="centered"
+    title="Blog"
+    subtitle="Insights on Security Technology"
+    description="Insights on security technology, surveillance best practices, and American manufacturing from our engineering team."
+  />
+
+  <section class="py-16 md:py-20">
+    <div class="container mx-auto px-4 md:px-6 max-w-4xl">
+      <div class="space-y-8">
+        {sortedPosts.map(post => (
+          <a href={`/blog/${post.slug}/`} class="group block bg-slate-900 border border-slate-800 rounded-lg p-8 hover:border-igt-cyan transition-all duration-300">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-igt-cyan text-xs font-semibold tracking-wide uppercase">{post.category}</span>
+              <span class="text-slate-600 mx-2">|</span>
+              <time datetime={post.date} class="text-slate-500 text-sm">
+                {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+              <span class="text-slate-600 mx-2">|</span>
+              <span class="text-slate-500 text-sm">{post.readTime}</span>
+            </div>
+            <h2 class="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-igt-cyan transition-colors">{post.title}</h2>
+            <p class="text-slate-400 leading-relaxed mb-4">{post.excerpt}</p>
+            <span class="inline-flex items-center text-igt-cyan font-medium text-sm">
+              Read Article
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="pb-16 md:pb-20">
+    <div class="container mx-auto px-4 md:px-6 max-w-4xl">
+      <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-12 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Questions About Security Technology?</h2>
+        <p class="text-slate-400 mb-6 max-w-lg mx-auto">Our engineering team is ready to discuss your specific security requirements.</p>
+        <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

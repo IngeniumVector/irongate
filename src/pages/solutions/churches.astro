@@ -1,0 +1,139 @@
+---
+import VerticalPage from '../../layouts/VerticalPage.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+---
+
+<!-- Industry Statistics Sources:
+  - FBI: Houses of worship experience an estimated 1,000+ violent incidents per year (FBI crime data)
+  - Carl Chinn database / Faith Based Security Network: 2023 tracked 200+ deadly force incidents at US houses of worship
+  - Nonprofit Risk Management Center: Churches face unique vulnerability during open-door worship services
+  - Church Mutual Insurance: Property crime (theft, vandalism) accounts for majority of church security claims
+  - National Congregations Study: Median congregation size is 70 members; most lack dedicated security staff
+  - FEMA: Houses of worship are classified as "soft targets" due to open access and predictable gathering times
+-->
+
+<VerticalPage
+  title="Church and House of Worship Security"
+  metaDescription="Discreet, AI-powered security for churches and houses of worship. Threat detection, access control, and surveillance that protects congregations without disrupting the welcoming atmosphere."
+  heroHeadline="Protecting Your Congregation, Preserving Your Mission"
+  heroSubheadline="House of Worship Security"
+  heroDescription="Security technology that protects the people and places that matter most, designed to work quietly in the background so your congregation can worship without worry."
+  painPoints={[
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"/><path d="M2 20h20"/><path d="M14 12v.01"/></svg>",
+      title: "Open-Door Vulnerability",
+      description: "Houses of worship are welcoming by nature. Open doors during services, community events, and daily operations create access points that are difficult to monitor with limited staff. FEMA classifies houses of worship as soft targets due to open access and predictable gathering schedules."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>",
+      title: "Active Threat Preparedness",
+      description: "Deadly force incidents at U.S. houses of worship have increased in recent years, with the Faith Based Security Network tracking over 200 such incidents in 2023 alone. Many congregations recognize the need for preparedness but lack the resources and expertise to respond effectively."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>",
+      title: "Limited Security Budgets",
+      description: "The median congregation has approximately 70 members. Most lack dedicated security staff, and volunteer safety teams have limited training and availability. Enterprise security platforms designed for corporations are financially out of reach for most faith communities."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>",
+      title: "After-Hours Property Protection",
+      description: "Churches sit empty for much of the week, making them targets for theft, vandalism, and break-ins. Church Mutual Insurance reports that property crime accounts for the majority of church security claims, often occurring during unmonitored overnight and weekday hours."
+    }
+  ]}
+  solutions={[
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>",
+      title: "AI Threat Detection",
+      description: "Automated weapon identification in under 5 seconds triggers instant alerts to your safety team, pastoral staff, and law enforcement. Early detection provides critical response time before a situation escalates."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>",
+      title: "Discreet Surveillance Coverage",
+      description: "SecMod units provide parking lot and perimeter coverage without altering the look and feel of your campus. Monitor entry points, children's areas, and gathering spaces while maintaining the welcoming atmosphere your congregation expects."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><rect x="9" y="10" width="6" height="5" rx="1"/><path d="M10 10V8a2 2 0 1 1 4 0v2"/></svg>",
+      title: "Controlled Access for Sensitive Areas",
+      description: "Protect nurseries, offices, and storage areas with card or mobile credential access control. Manage who enters sensitive areas during services and events without stationing volunteers at every door."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>",
+      title: "Safety Team Notifications",
+      description: "Instant mobile alerts keep your volunteer safety team informed in real time. When an AI alert triggers, the right people know immediately, whether they are in the sanctuary, parking lot, or children's wing."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>",
+      title: "After-Hours Monitoring",
+      description: "24/7 autonomous surveillance protects your property during unoccupied hours. AI-powered detection identifies unauthorized access and alerts designated contacts without requiring on-site security staff."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>",
+      title: "No Infrastructure Disruption",
+      description: "Solar-powered, cellular-connected units deploy without running cables through historic buildings or disrupting campus aesthetics. Add coverage to parking lots and perimeters without construction."
+    }
+  ]}
+  stats={[
+    { value: "<5s", label: "Weapon Detection Speed" },
+    { value: "24/7", label: "Autonomous Monitoring" },
+    { value: "11", label: "Security Patents" },
+    { value: "0", label: "Subscription Fees" }
+  ]}
+  differentiators={[
+    {
+      title: "Designed to Be Invisible",
+      description: "Security should protect, not intimidate. Our systems work in the background so your congregation feels safe and welcome, not surveilled. The goal is peace of mind without changing the character of your worship space."
+    },
+    {
+      title: "Affordable for Faith Communities",
+      description: "No per-camera subscription fees. No long-term contracts. Competitive pricing designed for organizations that run on tithes and donations, not corporate budgets. Up to 25% less than enterprise alternatives."
+    },
+    {
+      title: "On-Premise Data Control",
+      description: "Surveillance footage of your congregation stays on your own servers. No third-party cloud provider has access to recordings of your members, children's programs, or counseling areas."
+    },
+    {
+      title: "Personal Service, Not a Call Center",
+      description: "Work directly with our engineering team to design a solution for your specific campus. We understand that every house of worship is unique in its layout, schedule, and security philosophy."
+    }
+  ]}
+  productLinks={[
+    {
+      name: "SecMods",
+      description: "Portable surveillance for parking lots, perimeters, and outdoor gathering areas. Solar-powered with no infrastructure requirements.",
+      href: "/solutions/secmods/"
+    },
+    {
+      name: "Access Control",
+      description: "Protect nurseries, offices, and sensitive areas with card or mobile credential entry management and instant lockdown capability.",
+      href: "/solutions/access-control/"
+    }
+  ]}
+  warrantyTiers={[
+    { years: "7 Years", label: "Camera Systems" },
+    { years: "5 Years", label: "SecMod Units" },
+    { years: "3 Years", label: "All Other Systems" }
+  ]}
+  ctaHeadline="Let's Talk About Protecting Your Congregation"
+  ctaDescription="Our team will work with your pastoral leadership to design a security approach that fits your community's values and budget."
+>
+  <!-- Safety Team Section -->
+  <Section>
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader
+        title="Supporting Your Safety Ministry"
+        subtitle="Technology that empowers the volunteers who protect your flock"
+      />
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-white mb-3">Volunteer Safety Teams</h3>
+          <p class="text-slate-400 text-sm">Many congregations rely on volunteer safety teams with varying levels of training. AI-powered detection gives these teams earlier warning and better information, extending their effectiveness without requiring professional security credentials.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-white mb-3">Multi-Campus Coverage</h3>
+          <p class="text-slate-400 text-sm">For churches with multiple campuses, satellite locations, or shared facilities, portable SecMod units can relocate based on service schedules. Cover Wednesday night youth programs, Sunday services, and special events with the same equipment.</p>
+        </div>
+      </div>
+    </div>
+  </Section>
+</VerticalPage>

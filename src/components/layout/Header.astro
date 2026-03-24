@@ -1,0 +1,304 @@
+---
+const currentPath = Astro.url.pathname;
+const navItems = [
+  { label: 'About', href: '/about' },
+  { label: 'Solutions', href: '/solutions' },
+  { label: 'Industries', href: '/industries/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Team', href: '/team' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const solutionsProducts = [
+  { label: 'SecMods', href: '/solutions/secmods/' },
+  { label: 'YachtGuard', href: '/solutions/yachtguard/' },
+  { label: 'FreightGuard', href: '/solutions/freightguard/' },
+  { label: 'Falcon Strike', href: '/solutions/falcon-strike/' },
+  { label: 'Access Control', href: '/solutions/access-control/' },
+  { label: 'Autonomous Robots', href: '/solutions/autonomous-robots/' },
+  { label: 'RaptorNet', href: '/solutions/network-infrastructure/' },
+  { label: 'Hunting Solution', href: '/solutions/hunting-solution/' },
+];
+
+const solutionsIndustries = [
+  { label: 'Construction', href: '/solutions/construction/' },
+  { label: 'Marine', href: '/solutions/marine/' },
+  { label: 'Houses of Worship', href: '/solutions/churches/' },
+  { label: 'Schools', href: '/solutions/schools/' },
+  { label: 'Healthcare', href: '/solutions/healthcare/' },
+  { label: 'Government', href: '/solutions/government/' },
+  { label: 'Logistics', href: '/solutions/logistics/' },
+  { label: 'Commercial', href: '/solutions/commercial/' },
+  { label: 'Industrial', href: '/solutions/industrial/' },
+];
+
+function isActive(href: string): boolean {
+  const normalized = currentPath.endsWith('/') ? currentPath : currentPath + '/';
+  const normalizedHref = href.endsWith('/') ? href : href + '/';
+  return normalized === normalizedHref || (href !== '/' && normalized.startsWith(normalizedHref));
+}
+
+const solActive = isActive('/solutions');
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-slate-800">
+  <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img src="/logo.webp" alt="Iron Gate Technologies shield logo" class="h-10" width="616" height="442" style="aspect-ratio:616/442;width:auto" />
+        <span class="ml-3 text-white font-semibold text-lg hidden md:flex">Iron Gate Technologies</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8" aria-label="Main navigation">
+        <a
+          href="/about"
+          class={isActive('/about')
+            ? "text-igt-cyan border-b-2 border-igt-cyan pb-1 font-medium transition-colors"
+            : "text-slate-300 hover:text-igt-cyan transition-colors font-medium"}
+        >
+          About
+        </a>
+
+        <!-- Solutions with dropdown -->
+        <div class="relative" id="solutions-dropdown-wrapper">
+          <div class="flex items-center gap-1">
+            <a
+              href="/solutions"
+              class={solActive
+                ? "text-igt-cyan border-b-2 border-igt-cyan pb-1 font-medium transition-colors"
+                : "text-slate-300 hover:text-igt-cyan transition-colors font-medium"}
+            >
+              Solutions
+            </a>
+            <button
+              type="button"
+              id="solutions-dropdown-toggle"
+              class={solActive
+                ? "text-igt-cyan transition-transform duration-200"
+                : "text-slate-300 hover:text-igt-cyan transition-all duration-200"}
+              aria-expanded="false"
+              aria-controls="solutions-dropdown-panel"
+              aria-label="Toggle solutions menu"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Dropdown Panel -->
+          <div
+            id="solutions-dropdown-panel"
+            class="hidden absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[540px] bg-slate-900 border border-slate-800 rounded-lg shadow-xl p-6 z-50"
+            role="menu"
+            aria-label="Solutions navigation"
+          >
+            <!-- Invisible bridge to prevent hover gap -->
+            <div class="absolute -top-4 left-0 right-0 h-4"></div>
+            <div class="grid grid-cols-2 gap-8">
+              <!-- Products Column -->
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Products</p>
+                <ul class="space-y-2">
+                  {solutionsProducts.map((item) => (
+                    <li>
+                      <a href={item.href} class="block text-sm text-slate-300 hover:text-cyan-400 transition-colors py-1" role="menuitem">{item.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <!-- Industries Column -->
+              <div>
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Industries</p>
+                <ul class="space-y-2">
+                  {solutionsIndustries.map((item) => (
+                    <li>
+                      <a href={item.href} class="block text-sm text-slate-300 hover:text-cyan-400 transition-colors py-1" role="menuitem">{item.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <!-- Bottom row -->
+            <div class="mt-6 pt-4 border-t border-slate-800 flex justify-between">
+              <a href="/solutions/" class="text-sm text-cyan-400 hover:text-cyan-300 font-medium transition-colors" role="menuitem">View All Solutions</a>
+              <a href="/industries/" class="text-sm text-cyan-400 hover:text-cyan-300 font-medium transition-colors" role="menuitem">View All Industries</a>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="/industries/"
+          class={isActive('/industries/')
+            ? "text-igt-cyan border-b-2 border-igt-cyan pb-1 font-medium transition-colors"
+            : "text-slate-300 hover:text-igt-cyan transition-colors font-medium"}
+        >
+          Industries
+        </a>
+        <a
+          href="/blog/"
+          class={isActive('/blog/')
+            ? "text-igt-cyan border-b-2 border-igt-cyan pb-1 font-medium transition-colors"
+            : "text-slate-300 hover:text-igt-cyan transition-colors font-medium"}
+        >
+          Blog
+        </a>
+        <a
+          href="/team"
+          class={isActive('/team')
+            ? "text-igt-cyan border-b-2 border-igt-cyan pb-1 font-medium transition-colors"
+            : "text-slate-300 hover:text-igt-cyan transition-colors font-medium"}
+        >
+          Team
+        </a>
+        <a
+          href="/contact"
+          class={isActive('/contact')
+            ? "text-igt-cyan border-b-2 border-igt-cyan pb-1 font-medium transition-colors"
+            : "text-slate-300 hover:text-igt-cyan transition-colors font-medium"}
+        >
+          Contact
+        </a>
+        <a
+          href="/booking"
+          class="px-6 py-2 bg-igt-cyan text-black font-semibold rounded-lg hover:bg-igt-cyan-dark transition-colors"
+        >
+          Book a Security Assessment
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="inline-flex md:hidden items-center justify-center text-white p-3"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Spacer to prevent content from hiding under fixed header -->
+<div class="h-20"></div>
+
+<script>
+  // Mobile menu with focus trap
+  const button = document.getElementById('mobile-menu-button');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  function openMobileNav() {
+    if (!mobileNav || !button) return;
+    mobileNav.classList.remove('hidden');
+    button.setAttribute('aria-expanded', 'true');
+    button.setAttribute('aria-label', 'Close navigation menu');
+    document.body.style.overflow = 'hidden';
+    // Move focus to first focusable element inside nav
+    const firstLink = mobileNav.querySelector('a, button');
+    if (firstLink) firstLink.focus();
+  }
+
+  function closeMobileNav() {
+    if (!mobileNav || !button) return;
+    mobileNav.classList.add('hidden');
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', 'Open navigation menu');
+    document.body.style.overflow = '';
+    button.focus();
+  }
+
+  button?.addEventListener('click', () => {
+    const isHidden = mobileNav?.classList.contains('hidden');
+    if (isHidden) { openMobileNav(); } else { closeMobileNav(); }
+  });
+
+  // Escape key closes mobile nav
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobileNav && !mobileNav.classList.contains('hidden')) {
+      closeMobileNav();
+    }
+  });
+
+  // Focus trap: keep Tab cycling within the mobile nav
+  mobileNav?.addEventListener('keydown', function(e) {
+    if (e.key !== 'Tab') return;
+    const focusable = mobileNav.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // Solutions dropdown (desktop)
+  const wrapper = document.getElementById('solutions-dropdown-wrapper');
+  const toggle = document.getElementById('solutions-dropdown-toggle');
+  const panel = document.getElementById('solutions-dropdown-panel');
+
+  if (wrapper && toggle && panel) {
+    let hoverTimeout = null;
+    let closeTimeout = null;
+
+    function openDropdown() {
+      if (closeTimeout) { clearTimeout(closeTimeout); closeTimeout = null; }
+      panel.classList.remove('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.querySelector('svg')?.classList.add('rotate-180');
+    }
+
+    function closeDropdown() {
+      panel.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.querySelector('svg')?.classList.remove('rotate-180');
+    }
+
+    // Hover: open with small delay, close with delay
+    wrapper.addEventListener('mouseenter', function() {
+      if (closeTimeout) { clearTimeout(closeTimeout); closeTimeout = null; }
+      hoverTimeout = setTimeout(openDropdown, 150);
+    });
+
+    wrapper.addEventListener('mouseleave', function() {
+      if (hoverTimeout) { clearTimeout(hoverTimeout); hoverTimeout = null; }
+      closeTimeout = setTimeout(closeDropdown, 300);
+    });
+
+    // Toggle button click
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (panel.classList.contains('hidden')) { openDropdown(); } else { closeDropdown(); }
+    });
+
+    // Keyboard: Escape to close
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !panel.classList.contains('hidden')) {
+        closeDropdown();
+        toggle.focus();
+      }
+    });
+
+    // Close when focus leaves dropdown wrapper
+    wrapper.addEventListener('focusout', function(e) {
+      setTimeout(function() {
+        if (!wrapper.contains(document.activeElement)) {
+          closeDropdown();
+        }
+      }, 10);
+    });
+
+    // Open on toggle focus (for keyboard Tab navigation)
+    toggle.addEventListener('focus', function() {
+      openDropdown();
+    });
+  }
+</script>

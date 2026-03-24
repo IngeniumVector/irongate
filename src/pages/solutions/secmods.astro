@@ -1,0 +1,380 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+import FeatureCard from '../../components/cards/FeatureCard.astro';
+import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
+---
+
+<BaseLayout 
+  title="SecMods Portable AI Surveillance" 
+  description="Rapid-deploy portable surveillance units with AI-powered threat detection. Solar-powered, cellular-connected security for construction sites, events, and more."
+>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" is:inline>
+
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://irongate.world/solutions/secmods/#product",
+  "name": "ES Iron Gate Technologies SecMods",
+  "description": "Portable, AI-powered surveillance system that deploys in under 30 minutes. Solar-powered with cellular connectivity, providing gun detection in under 5 seconds and 24/7 operation without external power or WiFi.",
+  "brand": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "manufacturer": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "category": "Portable Surveillance Systems",
+  "image": [
+    "https://irongate.world/images/products/Secmod_1.webp",
+    "https://irongate.world/images/products/Secmod_2.webp"
+  ],
+  "url": "https://irongate.world/solutions/secmods/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Power Source",
+      "value": "Solar-powered"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Connectivity",
+      "value": "Cellular (no WiFi required)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Weather Rating",
+      "value": "IP67"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Camera Resolution",
+      "value": "Up to 4K Ultra HD"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Battery Backup",
+      "value": "72 hours"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Deployment Time",
+      "value": "Under 30 minutes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "AI Compliance",
+      "value": "ISO/IEC 42001"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Manufacturing",
+      "value": "Made in USA (Holly Hill, FL)"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "USD",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "USD",
+      "valueAddedTaxIncluded": false
+    },
+    "warranty": {
+      "@type": "WarrantyPromise",
+      "durationOfWarranty": {
+        "@type": "QuantitativeValue",
+        "value": 5,
+        "unitCode": "ANN"
+      },
+      "warrantyScope": "SecMod Units"
+    },
+    "seller": {
+      "@id": "https://irongate.world/#organization"
+    }
+  }
+}
+
+  </script>
+
+  <!-- Dataset: Field Reliability Data -->
+  <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "ES Iron Gate Technologies SecMods Field Reliability Data",
+  "description": "Field failure rate measured across all deployed SecMods portable surveillance units",
+  "creator": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "https://irongate.world/solutions/secmods/",
+    "encodingFormat": "text/html"
+  },
+  "variableMeasured": "Field failure rate",
+  "measurementTechnique": "Operational monitoring of deployed SecMods units"
+}
+  </script>
+    <!-- FAQPage Schema (GEO) -->
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does it take to set up a SecMods unit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A SecMods unit deploys in under 30 minutes. Each unit arrives pre-configured and tested. Position it, power it on, and you have professional-grade surveillance operational immediately. No electricians, trenching, or permits required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SecMods need an internet connection or electrical hookup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. SecMods is completely self-contained. It runs on solar power with a 72-hour battery backup and connects through 4G/5G LTE cellular networks. You can deploy it anywhere there is cellular coverage, with no external power or WiFi needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does SecMods detect guns and weapons?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SecMods uses AI-powered computer vision to identify firearms in the camera's field of view. The system detects guns in under 5 seconds and sends real-time alerts to your phone or monitoring center. All AI detection is developed in compliance with ISO/IEC 42001."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if a SecMods unit needs repair?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Iron Gate offers an overnight RMA program. If a unit has a problem, we ship a replacement the next business day. SecMod units carry a 5-year warranty, and camera systems carry a 7-year warranty. You also get access to our 24/7 dedicated support line with direct access to engineers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is SecMods manufactured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every SecMods unit is designed, engineered, and assembled at Iron Gate Technologies' facility in Holly Hill, Florida. In-house manufacturing gives us complete control over quality, customization, and delivery timelines."
+      }
+    }
+  ]
+}
+    </script>
+
+  <!-- Hero with Background Image -->
+  <section class="relative min-h-[60vh] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="/images/products/Secmod_1.webp"
+        srcset="/images/products/Secmod_1-640w.webp 640w, /images/products/Secmod_1-1024w.webp 1024w, /images/products/Secmod_1.webp 1400w"
+        sizes="100vw"
+        alt="SecMods portable AI surveillance unit deployed in the field"
+        width="1400"
+        height="1050"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10 py-24">
+      <div class="max-w-3xl bg-black/75 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+        <p class="text-igt-cyan font-semibold mb-4 tracking-wide uppercase text-sm">Portable Surveillance</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">SecMods</h1>
+        <p class="text-xl text-slate-300 mb-8 max-w-2xl">AI-powered surveillance units that deploy in minutes. Solar-powered, cellular-connected, and built for the toughest environments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Answer-First Paragraph (GEO) -->
+  <section class="bg-slate-950 pt-12 pb-0">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <p class="text-lg text-slate-300 max-w-3xl mx-auto text-center mb-12">Iron Gate SecMods is a portable, AI-powered surveillance system manufactured in Holly Hill, Florida. Each self-contained unit runs on solar power with cellular connectivity and detects guns in under 5 seconds. SecMods deploys in under 30 minutes with no external power or WiFi required.</p>
+    </div>
+  </section>
+
+  <!-- Challenge / Solution -->
+  <Section class="bg-slate-950">
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader 
+        title="The Challenge" 
+        subtitle="Traditional security systems require infrastructure" 
+      />
+      <p class="text-slate-400 text-lg text-center mb-12">
+Construction sites, temporary events, and remote locations need security but lack the electrical and network infrastructure for permanent installations. Running power and internet to these sites is expensive, time-consuming, and often impossible.
+</p>
+      <SectionHeader 
+        title="The Solution" 
+        subtitle="Deploy anywhere, anytime" 
+      />
+      <p class="text-slate-400 text-lg text-center">
+SecMods changes that. Our portable surveillance units are completely self-contained. Drop them anywhere and have professional-grade security operational in minutes. With a documented 0.77% field failure rate, SecMods units are built to stay operational in the harshest conditions. Whether you're securing a construction site for 6 months or an event venue for a weekend, SecMods delivers the same capabilities as permanent installations without the infrastructure investment.
+</p>
+    </div>
+  </Section>
+
+  <!-- Capabilities -->
+  <Section>
+    <SectionHeader 
+      title="Capabilities" 
+      subtitle="Everything you need in one portable unit" 
+    />
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>" title="AI-Powered Detection" description="Advanced computer vision identifies threats in real-time. Gun detection in under 3 seconds. Face recognition, license plate reading, and behavior analysis. All AI detection systems are developed in compliance with ISO/IEC 42001, the international standard for AI management systems." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>" title="Rapid Deployment" description="Fully operational in under 30 minutes. Arrives pre-configured and tested. Just position and power on." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>" title="Solar Powered" description="Runs 24/7 on solar with 72-hour battery backup. No electrical infrastructure required. Weather-resistant charging system." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>" title="Cellular Connectivity" description="Connect anywhere with 4G/5G LTE. No WiFi needed. Real-time streaming and alerts directly to your phone or monitoring center." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>" title="24/7 Monitoring" description="Connect to our monitoring center or your own security operations. Real-time alerts with video verification and instant response coordination." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>" title="Weather Resistant" description="Built for extreme conditions including hurricanes, heat, and humidity. Industrial-grade construction rated IP67 for complete dust and water protection." />
+    </div>
+  </Section>
+
+
+  <!-- Mid-Page CTA -->
+  <div class="text-center py-12 bg-slate-950/50 border-y border-slate-800">
+    <p class="text-slate-400 mb-4">Ready to see how Iron Gate can protect your operation?</p>
+    <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+  </div>
+
+  <!-- Technical Specifications -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Technical Specifications" 
+      subtitle="Built to industrial standards" 
+    />
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-slate-800">
+        <div class="divide-y divide-slate-800">
+          <div class="spec-row">
+            <span class="text-slate-400">Camera Resolution</span>
+            <span class="text-white font-medium">Up to 4K Ultra HD</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Night Vision</span>
+            <span class="text-white font-medium">Infrared + Thermal Options</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Power Source</span>
+            <span class="text-white font-medium">Solar + Battery (72hr backup)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Connectivity</span>
+            <span class="text-white font-medium">4G LTE / 5G Ready</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Storage</span>
+            <span class="text-white font-medium">Local + Cloud Hybrid</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Mast Height</span>
+            <span class="text-white font-medium">Up to 22 Feet</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Operating Temperature</span>
+            <span class="text-white font-medium">-20°F to 140°F</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Weather Rating</span>
+            <span class="text-white font-medium">IP67 / Hurricane Rated</span>
+          </div>
+        </div>
+      </div>
+      <p class="text-slate-400 text-sm text-center mt-6">
+Specifications vary by configuration. Contact us for detailed specs matching your requirements.
+</p>
+    </div>
+  </Section>
+
+  <!-- Deployment Gallery -->
+  <Section>
+    <SectionHeader 
+      title="Deployed Across Every Environment" 
+      subtitle="Real SecMods units protecting real sites" 
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <img
+        src="/images/products/secmod-day-deployment.webp"
+        srcset="/images/products/secmod-day-deployment-640w.webp 640w, /images/products/secmod-day-deployment.webp 1500w"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        alt="SecMod surveillance unit with camera array against blue sky"
+        width="1500" 
+        height="2000"
+        loading="lazy"
+        class="rounded-lg border border-slate-800 aspect-[3/4] object-cover"
+      />
+      <img
+        src="/images/products/secmod-night-deployment.webp"
+        srcset="/images/products/secmod-night-deployment-640w.webp 640w, /images/products/secmod-night-deployment.webp 1500w"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        alt="SecMod unit with camera array operating at dusk with indicator lights"
+        width="1500" 
+        height="2000"
+        loading="lazy"
+        class="rounded-lg border border-slate-800 aspect-[3/4] object-cover"
+      />
+    </div>
+  </Section>
+
+  <!-- FAQ Section (GEO) -->
+  <Section class="bg-slate-950">
+    <SectionHeader title="Frequently Asked Questions" />
+    <div class="max-w-3xl mx-auto space-y-4">
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        How long does it take to set up a SecMods unit?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">A SecMods unit deploys in under 30 minutes. Each unit arrives pre-configured and tested. Position it, power it on, and you have professional-grade surveillance operational immediately. No electricians, trenching, or permits required.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Does SecMods need an internet connection or electrical hookup?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">No. SecMods is completely self-contained. It runs on solar power with a 72-hour battery backup and connects through 4G/5G LTE cellular networks. You can deploy it anywhere there is cellular coverage, with no external power or WiFi needed.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        How does SecMods detect guns and weapons?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">SecMods uses AI-powered computer vision to identify firearms in the camera's field of view. The system detects guns in under 5 seconds and sends real-time alerts to your phone or monitoring center. All AI detection is developed in compliance with ISO/IEC 42001.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        What happens if a SecMods unit needs repair?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Iron Gate offers an overnight RMA program. If a unit has a problem, we ship a replacement the next business day. SecMod units carry a 5-year warranty, and camera systems carry a 7-year warranty. You also get access to our 24/7 dedicated support line with direct access to engineers.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Where is SecMods manufactured?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Every SecMods unit is designed, engineered, and assembled at Iron Gate Technologies' facility in Holly Hill, Florida. In-house manufacturing gives us complete control over quality, customization, and delivery timelines.</p>
+    </details>
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-black">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+Deploy SecMods at Your Site
+</h2>
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+Our team will configure a SecMods deployment plan for your specific environment. Solar-powered, cellular-connected, ready in under 30 minutes.
+</p>
+        <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

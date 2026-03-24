@@ -1,0 +1,377 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+import FeatureCard from '../../components/cards/FeatureCard.astro';
+import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
+---
+
+<BaseLayout 
+  title="Hunting Solution Wildlife Security Platform" 
+  description="Tree-mounted, solar-powered wildlife intelligence platform with autonomous tracking, 4K dual-lens imaging, and LTE cellular connectivity. Real-time monitoring without infrastructure. Built in Florida."
+>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" is:inline>
+
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://irongate.world/solutions/hunting-solution/#product",
+  "name": "ES Iron Gate Technologies Hunting Solution",
+  "description": "Tree-mounted, solar-powered wildlife intelligence platform with 4K dual-lens imaging and LTE cellular connectivity. Real-time monitoring of hunting properties and rural land without existing infrastructure.",
+  "brand": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "manufacturer": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "category": "Wildlife Surveillance Systems",
+  "image": [
+    "https://irongate.world/images/products/hunting-solution-tree-mount.webp",
+    "https://irongate.world/images/products/hunting-solution-side-view.webp",
+    "https://irongate.world/images/products/hunting-solution-detail.webp"
+  ],
+  "url": "https://irongate.world/solutions/hunting-solution/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Imaging",
+      "value": "4K Dual-Lens (wide-angle + telephoto zoom)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Power",
+      "value": "Solar with integrated rechargeable battery"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Connectivity",
+      "value": "4G LTE Cellular"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Manufacturing",
+      "value": "Made in USA (Holly Hill, FL)"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "USD",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "USD",
+      "valueAddedTaxIncluded": false
+    },
+    "warranty": {
+      "@type": "WarrantyPromise",
+      "durationOfWarranty": {
+        "@type": "QuantitativeValue",
+        "value": 3,
+        "unitCode": "ANN"
+      },
+      "warrantyScope": "Hunting Solution Systems"
+    },
+    "seller": {
+      "@id": "https://irongate.world/#organization"
+    }
+  }
+}
+
+  </script>
+    <!-- FAQPage Schema (GEO) -->
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Hunting Solution need power lines or WiFi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Hunting Solution is completely self-contained with solar power and LTE cellular connectivity. It is designed for remote locations with no existing infrastructure, including hunting properties, rural land, and wildlife management areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Hunting Solution different from a trail camera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hunting Solution provides real-time 4K dual-lens monitoring with AI-powered autonomous tracking, live cellular streaming, and remote access from your phone. Traditional trail cameras only capture still images or short clips that you retrieve manually by visiting the camera."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Hunting Solution mount to a tree?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hunting Solution uses a purpose-built tree mounting system that secures the unit at the optimal height and angle. The mount is designed for quick installation and repositioning as your monitoring needs change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Hunting Solution monitor property security in addition to wildlife?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. While designed for wildlife monitoring, the AI-powered detection system also identifies human activity, vehicles, and unauthorized access. Many landowners use Hunting Solution for combined wildlife management and property security."
+      }
+    }
+  ]
+}
+    </script>
+
+  <!-- Hero with Background Image -->
+  <section class="relative min-h-[60vh] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="/images/products/hunting-solution-tree-mount.webp"
+        alt="Hunting Solution autonomous wildlife surveillance platform mounted on tree with solar panel"
+        width="3024"
+        height="4032"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10 py-24">
+      <div class="max-w-3xl bg-black/75 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+        <p class="text-igt-cyan font-semibold mb-4 tracking-wide uppercase text-sm">Autonomous Wildlife Intelligence</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Hunting Solution</h1>
+        <p class="text-xl text-slate-300 mb-8 max-w-2xl">Tree-mounted, solar-powered wildlife intelligence platform with autonomous tracking, 4K dual-lens imaging, and LTE cellular connectivity. Real-time monitoring without infrastructure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Answer-First Paragraph (GEO) -->
+  <section class="bg-slate-950 pt-12 pb-0">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <p class="text-lg text-slate-300 max-w-3xl mx-auto text-center mb-12">Iron Gate Hunting Solution is a tree-mounted, solar-powered wildlife intelligence platform with 4K dual-lens imaging and LTE cellular connectivity. It provides real-time monitoring of hunting properties and rural land without any existing infrastructure. Designed for remote locations where traditional cameras fall short.</p>
+    </div>
+  </section>
+
+  <!-- Challenge / Solution -->
+  <Section class="bg-slate-950">
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader 
+        title="The Challenge" 
+        subtitle="Traditional trail cameras are blind between visits" 
+      />
+      <p class="text-slate-400 text-lg text-center mb-12">
+Wildlife observation and remote property monitoring have relied on passive trail cameras for decades. These systems require periodic physical access to retrieve recorded data. They cannot track subjects, provide no real-time alerts, and leave landowners and hunters operating on stale information days or weeks old. If something happens between visits, you find out only after the fact.
+</p>
+      <SectionHeader 
+        title="The Solution" 
+        subtitle="Always-on intelligence that comes to you" 
+      />
+      <p class="text-slate-400 text-lg text-center">
+The Hunting Solution transforms wildlife monitoring from a passive, after-the-fact exercise into real-time, continuous intelligence. The system autonomously detects, tracks, zooms, records, and transmits activity to your phone or computer instantly over LTE cellular. Solar power means it operates indefinitely without battery replacement. Tree-mounted camouflage housing keeps it concealed and elevated for maximum coverage. Deploy it in minutes. Check it from anywhere in the country.
+</p>
+    </div>
+  </Section>
+
+  <!-- Capabilities -->
+  <Section>
+    <SectionHeader 
+      title="Capabilities" 
+      subtitle="Complete autonomous wildlife intelligence in a single platform" 
+    />
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <FeatureCard icon="<svg class='w-8 h-8 text-igt-cyan' aria-hidden='true' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z'/><circle cx='12' cy='13' r='4'/></svg>" title="4K Dual-Lens Imaging" description="Wide-angle lens for continuous panoramic observation, plus a telephoto zoom lens that automatically tracks and magnifies detected subjects. Ultra-high-definition resolution for clear species identification and human or vehicle recognition." />
+      <FeatureCard icon="<svg class='w-8 h-8 text-igt-cyan' aria-hidden='true' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'/><circle cx='12' cy='12' r='3'/></svg>" title="Autonomous Tracking Intelligence" description="Onboard AI distinguishes between wildlife, humans, and vehicles. Upon detection, the system locks on, tracks movement, zooms for detail, records video evidence, and sends real-time alerts to your device. Active intelligence, not passive recording." />
+      <FeatureCard icon="<svg class='w-8 h-8 text-igt-cyan' aria-hidden='true' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='5 9 2 12 5 15'/><polyline points='9 5 12 2 15 5'/><polyline points='15 19 12 22 9 19'/><polyline points='19 9 22 12 19 15'/><line x1='2' y1='12' x2='22' y2='12'/><line x1='12' y1='2' x2='12' y2='22'/></svg>" title="Pan-Tilt-Zoom Control" description="Motorized horizontal rotation, vertical tilt, and autonomous zoom control provide full coverage of the surrounding environment. One camera covers what would otherwise require multiple fixed units. Control it remotely or let the AI handle positioning." />
+      <FeatureCard icon="<svg class='w-8 h-8 text-igt-cyan' aria-hidden='true' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><rect width='14' height='20' x='5' y='2' rx='2' ry='2'/><line x1='12' y1='18' x2='12.01' y2='18'/></svg>" title="LTE Cellular Connectivity" description="View live video, receive instant detection alerts, control camera movement, and access recorded footage from anywhere in the United States. No WiFi or wired internet required. If your phone gets signal, the Hunting Solution can reach you." />
+      <FeatureCard icon="<svg class='w-8 h-8 text-igt-cyan' aria-hidden='true' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='5'/><line x1='12' y1='1' x2='12' y2='3'/><line x1='12' y1='21' x2='12' y2='23'/><line x1='4.22' y1='4.22' x2='5.64' y2='5.64'/><line x1='18.36' y1='18.36' x2='19.78' y2='19.78'/><line x1='1' y1='12' x2='3' y2='12'/><line x1='21' y1='12' x2='23' y2='12'/><line x1='4.22' y1='19.78' x2='5.64' y2='18.36'/><line x1='18.36' y1='5.64' x2='19.78' y2='4.22'/></svg>" title="Solar-Powered Indefinite Operation" description="Integrated solar panel continuously recharges the internal battery system during daylight hours. No battery swaps, no power runs, no maintenance trips. Deploy it and leave it. The system operates year-round through all seasons." />
+      <FeatureCard icon="<svg class='w-8 h-8 text-igt-cyan' aria-hidden='true' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>" title="Weatherproof Camouflage Housing" description="Sealed, weather-resistant enclosure with camouflage exterior blends into the environment. Resistant to rain, heat, cold, wind, dust, and humidity. Protective canopy shields internal components. Deploy in any season, any terrain." />
+    </div>
+  </Section>
+
+  <!-- Mid-Page CTA -->
+  <div class="text-center py-12 bg-slate-950/50 border-y border-slate-800">
+    <p class="text-slate-400 mb-4">Ready to see what is happening on your property right now?</p>
+    <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+  </div>
+
+  <!-- Technical Specifications -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Technical Specifications" 
+      subtitle="Built for the field, engineered for intelligence" 
+    />
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-slate-800">
+        <div class="divide-y divide-slate-800">
+          <div class="spec-row">
+            <span class="text-slate-400">Imaging</span>
+            <span class="text-white font-medium">Dual-lens: wide-angle panoramic + telephoto zoom</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Resolution</span>
+            <span class="text-white font-medium">4K Ultra-High-Definition</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Camera Movement</span>
+            <span class="text-white font-medium">Pan-Tilt-Zoom (motorized, autonomous or remote controlled)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">AI Detection</span>
+            <span class="text-white font-medium">Wildlife, human, and vehicle classification with auto-tracking</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Alerts</span>
+            <span class="text-white font-medium">Real-time push notifications on detection events</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Connectivity</span>
+            <span class="text-white font-medium">4G LTE cellular (no WiFi or wired internet required)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Power</span>
+            <span class="text-white font-medium">Solar panel with integrated rechargeable battery</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Operation</span>
+            <span class="text-white font-medium">Continuous, year-round, fully autonomous</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Mounting</span>
+            <span class="text-white font-medium">Tree, pole, or elevated structure</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Setup Time</span>
+            <span class="text-white font-medium">Minutes (no infrastructure required)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Housing</span>
+            <span class="text-white font-medium">Weather-resistant sealed enclosure with camouflage exterior</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Durability</span>
+            <span class="text-white font-medium">Rain, heat, cold, wind, dust, and humidity resistant</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Storage</span>
+            <span class="text-white font-medium">Onboard recording with remote access to footage</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Remote Access</span>
+            <span class="text-white font-medium">Live video, camera control, and footage review from any device</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Manufacturing</span>
+            <span class="text-white font-medium">Made in USA (Holly Hill, FL)</span>
+          </div>
+        </div>
+      </div>
+      <p class="text-slate-400 text-sm text-center mt-6">
+Specifications may vary by configuration. Contact us for detailed specs matching your deployment requirements.
+</p>
+    </div>
+  </Section>
+
+  <!-- In the Field -->
+  <Section>
+    <SectionHeader 
+      title="In the Field" 
+      subtitle="Deployed and operational in remote environments" 
+    />
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <img src="/images/products/hunting-solution-tree-mount.webp" alt="Hunting Solution tree-mounted surveillance platform with solar panel, front view" width="3024" height="4032" loading="lazy" class="rounded-lg border border-slate-800" />
+      <img src="/images/products/hunting-solution-side-view.webp" alt="Hunting Solution tree-mounted surveillance unit, side angle view" width="3024" height="4032" loading="lazy" class="rounded-lg border border-slate-800" />
+      <img src="/images/products/hunting-solution-detail.webp" alt="Hunting Solution camouflage PTZ camera with custom mounting bracket, close-up detail" width="3024" height="4032" loading="lazy" class="rounded-lg border border-slate-800" />
+    </div>
+  </Section>
+
+  <!-- Applications -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Applications" 
+      subtitle="Designed for hunters, landowners, and conservation professionals" 
+    />
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Hunting Intelligence</h3>
+        <p class="text-slate-400">
+Monitor wildlife patterns, observe trophy animals, and track feeding zone activity in real time from your phone. Know what is moving on your property before you head to the stand. Scout 24/7 without disturbing the environment.
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Ranch and Agricultural Monitoring</h3>
+        <p class="text-slate-400">
+Watch over livestock, detect predators before they strike, and monitor remote pastures and fence lines. Receive instant alerts when something enters your property. Replace windshield time with real-time awareness.
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Conservation and Wildlife Research</h3>
+        <p class="text-slate-400">
+Track population patterns, monitor migration routes, and observe species behavior without human interference. Continuous autonomous recording builds richer datasets than periodic manual surveys. Footage is accessible remotely for research teams.
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Remote Property Security</h3>
+        <p class="text-slate-400">
+Protect hunting leases, rural acreage, timber land, and remote structures from trespassing, poaching, theft, and vandalism. AI detection distinguishes between animals and humans, so you only get alerts that matter.
+</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Warranty -->
+  <div class="max-w-3xl mx-auto mt-8">
+    <div class="bg-slate-900/50 border border-slate-800 rounded-lg p-4 flex items-center justify-center gap-4">
+      <div class="text-2xl font-bold text-igt-cyan">3-Year Warranty</div>
+      <div class="text-slate-400 text-sm">on all Hunting Solution components</div>
+    </div>
+    <p class="text-slate-400 text-sm text-center mt-4">If something does go wrong, our overnight RMA program ships a replacement unit the next business day. Every Iron Gate customer has access to our 24/7 dedicated support line. No call centers, no ticket queues.</p>
+  </div>
+
+
+  <!-- FAQ Section (GEO) -->
+  <Section class="bg-slate-950">
+    <SectionHeader title="Frequently Asked Questions" />
+    <div class="max-w-3xl mx-auto space-y-4">
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Does Hunting Solution need power lines or WiFi?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">No. Hunting Solution is completely self-contained with solar power and LTE cellular connectivity. It is designed for remote locations with no existing infrastructure, including hunting properties, rural land, and wildlife management areas.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        How is Hunting Solution different from a trail camera?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Hunting Solution provides real-time 4K dual-lens monitoring with AI-powered autonomous tracking, live cellular streaming, and remote access from your phone. Traditional trail cameras only capture still images or short clips that you retrieve manually by visiting the camera.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        How does Hunting Solution mount to a tree?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Hunting Solution uses a purpose-built tree mounting system that secures the unit at the optimal height and angle. The mount is designed for quick installation and repositioning as your monitoring needs change.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Can Hunting Solution monitor property security in addition to wildlife?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. While designed for wildlife monitoring, the AI-powered detection system also identifies human activity, vehicles, and unauthorized access. Many landowners use Hunting Solution for combined wildlife management and property security.</p>
+    </details>
+    </div>
+  </Section>
+  <!-- CTA -->
+  <section class="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-black">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+Ready to Deploy the Hunting Solution?
+</h2>
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+Discuss your monitoring requirements with our team. We will configure the Hunting Solution for your specific terrain and objectives.
+</p>
+        <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

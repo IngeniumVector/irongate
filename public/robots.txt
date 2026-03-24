@@ -1,0 +1,57 @@
+# Iron Gate Technologies - irongate.world
+# robots.txt
+# Updated: 2026-03-20
+
+User-agent: *
+Allow: /
+
+# Staging URLs (*.pages.dev) are blocked by Cloudflare 403 response, not robots.txt.
+# robots.txt Disallow paths are host-scoped and cannot block a different domain.
+Disallow: /cdn-cgi/
+
+# Block legacy URLs (wastes crawl budget)
+Disallow: /blog/index.php
+Disallow: /company.html
+Disallow: /privacy-policy.html
+Disallow: /terms-of-service.html
+Disallow: /about-us.html
+Disallow: /contact-us.html
+Disallow: /contact.html
+Disallow: /index.html
+
+# Block WordPress probe paths (spam crawl targets)
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-content/
+Disallow: /xmlrpc.php
+
+# Block thank-you page from indexing
+Disallow: /booking/thank-you
+
+# AI Crawlers - Explicitly allowed for AI recommendation indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap location
+Sitemap: https://irongate.world/sitemap.xml

@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/layout/Hero.astro';
+import Section from '../components/layout/Section.astro';
+import SectionHeader from '../components/layout/SectionHeader.astro';
+import TeamCard from '../components/cards/TeamCard.astro';
+---
+
+<BaseLayout 
+  title="Team" 
+  description="Meet the Iron Gate Technologies leadership team: decades of experience in law enforcement, military operations, and security technology."
+>
+  <Hero 
+    variant="centered"
+    title="Leadership Built on Experience"
+    description="Our team brings decades of combined expertise in law enforcement, military operations, and security technology."
+  />
+
+  <Section>
+    <SectionHeader 
+      title="Our Leadership Team" 
+    />
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <TeamCard 
+        name="Todd Simpson"
+        role="Founder and CEO"
+        bio="Leads Iron Gate's strategic vision and oversees product development. His focus on engineering innovation and customer-first service has positioned Iron Gate as a competitive American-made alternative in the security technology market."
+        image="/images/team/todd-simpson.webp"
+      />
+      
+      <TeamCard 
+        name="Raymond 'Rusty' Oenbrink"
+        role="Chairman of the Board"
+        bio="Brings extensive business oversight experience and strategic thinking to Iron Gate's operations and growth initiatives. His focus on organizational governance ensures Iron Gate maintains the standards and accountability its clients expect."
+        image="/images/team/raymond-oenbrink.webp"
+      />
+      
+      <TeamCard 
+        name="Chase M. Elliott"
+        role="Director of Production"
+        bio="US Army veteran with computer sciences background. Founded Armorer's Warehouse LLC in 2016. Oversees all manufacturing operations at Iron Gate's Holly Hill facility."
+        image="/images/team/chase-elliott.webp"
+      />
+      
+      <TeamCard 
+        name="Corey Selliken"
+        role="Lead AI Engineer"
+        bio="Specializes in artificial intelligence and machine learning systems. Develops the AI-powered threat detection algorithms that power Iron Gate's surveillance technology."
+        image="/images/team/corey-selliken.webp"
+      />
+      
+      <TeamCard 
+        name="Vinny Arcuri"
+        role="Operations Specialist"
+        bio="Manages day-to-day operations and client deployments. Ensures seamless installation and ongoing support for Iron Gate security systems nationwide."
+        image="/images/team/vinny-arcuri.webp"
+        imagePosition="center 20%"
+      />
+
+      <TeamCard 
+        name="Mike Scocca"
+        role="Director of Manufacturing"
+        bio="He builds everything that the team designs and takes pride in making sure our clients are safe."
+        image="/images/team/mike-scocca.webp"
+        imagePosition="center 15%"
+      />
+    </div>
+  </Section>
+
+  <!-- Experience Bar -->
+  <Section class="bg-slate-950">
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader 
+        title="Combined Expertise" 
+      />
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-igt-cyan mb-2 anim-counter" data-target="75" data-suffix="+">0</div>
+          <div class="text-slate-400">Years Combined Experience</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-igt-cyan mb-2 anim-counter" data-target="11">0</div>
+          <div class="text-slate-400">Security Patents</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-igt-cyan mb-2 anim-counter" data-target="100" data-suffix="%">0</div>
+          <div class="text-slate-400">Veteran Leadership</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-igt-cyan mb-2 anim-counter" data-target="24" data-suffix="/7">0</div>
+          <div class="text-slate-400">Team Support</div>
+        </div>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

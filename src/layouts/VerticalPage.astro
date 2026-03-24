@@ -1,0 +1,233 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Hero from '../components/layout/Hero.astro';
+import Section from '../components/layout/Section.astro';
+import SectionHeader from '../components/layout/SectionHeader.astro';
+import FeatureCard from '../components/cards/FeatureCard.astro';
+import ButtonPrimary from '../components/buttons/ButtonPrimary.astro';
+import ButtonSecondary from '../components/buttons/ButtonSecondary.astro';
+
+interface PainPoint {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface Solution {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface Stat {
+  value: string;
+  label: string;
+}
+
+interface Differentiator {
+  title: string;
+  description: string;
+}
+
+interface ProductLink {
+  name: string;
+  description: string;
+  href: string;
+}
+
+interface WarrantyTier {
+  years: string;
+  label: string;
+}
+
+interface Props {
+  title: string;
+  metaDescription: string;
+  heroHeadline: string;
+  heroSubheadline?: string;
+  heroDescription: string;
+  heroBadge?: string;
+  painPoints: PainPoint[];
+  solutions: Solution[];
+  stats: Stat[];
+  differentiators: Differentiator[];
+  productLinks: ProductLink[];
+  warrantyTiers: WarrantyTier[];
+  ctaHeadline?: string;
+  ctaDescription?: string;
+}
+
+const {
+  title,
+  metaDescription,
+  heroHeadline,
+  heroSubheadline,
+  heroDescription,
+  heroBadge,
+  painPoints,
+  solutions,
+  stats,
+  differentiators,
+  productLinks,
+  warrantyTiers,
+  ctaHeadline = 'Ready to Discuss Your Security Needs?',
+  ctaDescription = 'Our team will design a customized security solution for your specific requirements.',
+} = Astro.props;
+
+// Pre-computed Tailwind classes to avoid dynamic interpolation breaking CSS purge
+/*
+  Tailwind safelist - dynamic grid classes used in this template:
+  grid-cols-2 md:grid-cols-1 md:grid-cols-2 md:grid-cols-3 md:grid-cols-4
+*/
+const statsGridClass = ['', 'grid grid-cols-2 md:grid-cols-1 gap-8 text-center', 'grid grid-cols-2 md:grid-cols-2 gap-8 text-center', 'grid grid-cols-2 md:grid-cols-3 gap-8 text-center', 'grid grid-cols-2 md:grid-cols-4 gap-8 text-center'][Math.min(stats.length, 4)] || 'grid grid-cols-2 md:grid-cols-4 gap-8 text-center';
+const productGridClass = ['', 'grid md:grid-cols-1 gap-8 max-w-5xl mx-auto', 'grid md:grid-cols-2 gap-8 max-w-5xl mx-auto', 'grid md:grid-cols-3 gap-8 max-w-5xl mx-auto'][Math.min(productLinks.length, 3)] || 'grid md:grid-cols-3 gap-8 max-w-5xl mx-auto';
+const warrantyGridClass = ['', 'grid grid-cols-1 md:grid-cols-1 gap-6 text-center', 'grid grid-cols-1 md:grid-cols-2 gap-6 text-center', 'grid grid-cols-1 md:grid-cols-3 gap-6 text-center'][Math.min(warrantyTiers.length, 3)] || 'grid grid-cols-1 md:grid-cols-3 gap-6 text-center';
+---
+
+<BaseLayout title={title} description={metaDescription}>
+  <Fragment slot="head"><slot name="head" /></Fragment>
+  <!-- Hero -->
+  <Hero
+    variant="product"
+    title={heroHeadline}
+    subtitle={heroSubheadline}
+    description={heroDescription}
+    badge={heroBadge}
+  >
+    <div slot="cta" class="flex flex-col sm:flex-row gap-4">
+      <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+      <ButtonSecondary href="/solutions" text="View All Solutions" />
+    </div>
+  </Hero>
+
+  <!-- Stats Bar -->
+  {stats.length > 0 && (
+    <section class="bg-slate-950 border-y border-slate-800 py-12">
+      <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div class={statsGridClass}>
+          {stats.map(stat => (
+            <div>
+              <div class="text-3xl md:text-4xl font-bold text-igt-cyan mb-2">{stat.value}</div>
+              <div class="text-slate-400 text-sm md:text-base">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Pain Points / The Challenge -->
+  <Section>
+    <SectionHeader
+      title="The Challenge"
+      subtitle="Security concerns that keep you up at night"
+    />
+    <div class="grid md:grid-cols-2 gap-8">
+      {painPoints.map(point => (
+        <FeatureCard
+          icon={point.icon}
+          title={point.title}
+          description={point.description}
+        />
+      ))}
+    </div>
+  </Section>
+
+  <!-- Solutions / How Iron Gate Helps -->
+  <Section class="bg-slate-950">
+    <SectionHeader
+      title="How Iron Gate Solves It"
+      subtitle="Purpose-built security technology for your environment"
+    />
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {solutions.map(sol => (
+        <FeatureCard
+          icon={sol.icon}
+          title={sol.title}
+          description={sol.description}
+        />
+      ))}
+    </div>
+  </Section>
+
+  <!-- Mid-Page CTA -->
+  <div class="text-center py-12 bg-slate-950/50 border-y border-slate-800">
+    <p class="text-slate-400 mb-4">Ready to see how Iron Gate can protect your operation?</p>
+    <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+  </div>
+
+  <!-- Differentiators / Why Iron Gate -->
+  <Section>
+    <SectionHeader
+      title="Why Iron Gate"
+      subtitle="What sets us apart from enterprise security vendors"
+    />
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {differentiators.map(diff => (
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-igt-cyan transition-all duration-300">
+          <h3 class="text-lg font-semibold text-white mb-3">{diff.title}</h3>
+          <p class="text-slate-400 text-sm">{diff.description}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- Additional Content Slot -->
+  <slot />
+
+  <!-- Recommended Products -->
+  <Section class="bg-slate-950">
+    <SectionHeader
+      title="Recommended Solutions"
+      subtitle="Products designed for your environment"
+    />
+    <div class={productGridClass}>
+      {productLinks.map(product => (
+        <a href={product.href} aria-label={`Learn more about ${product.name}`} class="group bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-igt-cyan transition-all duration-300 block">
+          <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-igt-cyan transition-colors">{product.name}</h3>
+          <p class="text-slate-400 text-sm mb-4">{product.description}</p>
+          <span class="inline-flex items-center text-igt-cyan font-medium text-sm">
+            Learn More
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      ))}
+    </div>
+  </Section>
+
+  <!-- Warranty -->
+  {warrantyTiers.length > 0 && (
+    <Section>
+      <div class="bg-slate-950/50 border border-slate-800 rounded-xl p-8 max-w-4xl mx-auto">
+        <h3 class="text-xl font-bold text-white text-center mb-6">Industry-Leading Warranty Protection</h3>
+        <div class={warrantyGridClass}>
+          {warrantyTiers.map(tier => (
+            <div class="p-4">
+              <div class="text-3xl font-bold text-igt-cyan mb-1">{tier.years}</div>
+              <div class="text-slate-300 text-sm font-medium">{tier.label}</div>
+            </div>
+          ))}
+        </div>
+        <p class="text-slate-400 text-xs text-center mt-4">Built to last. Backed by warranties that prove it.</p>
+      </div>
+    </Section>
+  )}
+
+  <!-- Final CTA -->
+  <Section>
+    <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-12 md:p-16 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        {ctaHeadline}
+      </h2>
+      <p class="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+        {ctaDescription}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+        <ButtonSecondary href="/contact" text="Contact Us" />
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

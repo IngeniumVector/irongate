@@ -1,0 +1,44 @@
+---
+const currentPath = Astro.url.pathname;
+const navItems = [
+  { label: 'About', href: '/about' },
+  { label: 'Solutions', href: '/solutions' },
+  { label: 'Industries', href: '/industries/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Team', href: '/team' },
+  { label: 'Contact', href: '/contact' },
+];
+
+function isActive(href: string): boolean {
+  const normalized = currentPath.endsWith('/') ? currentPath : currentPath + '/';
+  const normalizedHref = href.endsWith('/') ? href : href + '/';
+  return normalized === normalizedHref || (href !== '/' && normalized.startsWith(normalizedHref));
+}
+---
+
+<div 
+  id="mobile-nav" 
+  class="hidden md:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-md"
+  role="dialog"
+  aria-label="Mobile navigation menu"
+  aria-modal="true"
+>
+  <nav class="flex flex-col items-center justify-center h-full space-y-8" aria-label="Mobile navigation">
+    {navItems.map(item => (
+      <a 
+        href={item.href}
+        class={isActive(item.href)
+          ? "text-2xl text-igt-cyan font-medium transition-colors"
+          : "text-2xl text-white hover:text-igt-cyan transition-colors font-medium"}
+      >
+        {item.label}
+      </a>
+    ))}
+    <a 
+      href="/booking"
+      class="px-8 py-3 bg-igt-cyan text-black font-semibold rounded-lg hover:bg-igt-cyan-dark transition-colors text-xl"
+    >
+      Book a Security Assessment
+    </a>
+  </nav>
+</div>

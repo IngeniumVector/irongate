@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/layout/Hero.astro';
+import Section from '../components/layout/Section.astro';
+import SectionHeader from '../components/layout/SectionHeader.astro';
+import FeatureCard from '../components/cards/FeatureCard.astro';
+import ButtonPrimary from '../components/buttons/ButtonPrimary.astro';
+---
+
+<BaseLayout 
+  title="About" 
+  description="Iron Gate Technologies: American-made security solutions manufactured in Holly Hill, Florida. Learn about our mission, leadership, and commitment to innovation."
+>
+  <Hero 
+    variant="centered"
+    title="Security Solutions Built on American Values"
+    description="For over a decade, Iron Gate Technologies has been at the forefront of security innovation, manufacturing AI-powered surveillance and access control systems right here in the United States."
+  />
+
+  <!-- Company Story -->
+  <Section>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Our Story</h2>
+      <div class="prose prose-lg prose-invert max-w-none">
+        <p class="text-slate-300 text-lg mb-6">
+          Iron Gate Technologies was founded on a simple but powerful belief: American security demands American solutions. While many of our competitors outsource manufacturing overseas, we maintain complete control over our production process at our Holly Hill, Florida facility.
+        </p>
+        <p class="text-slate-300 text-lg mb-6">
+          With 11 patents in security technology and decades of combined experience in law enforcement, military operations, and business leadership, our team brings unmatched expertise to every project. We don't just configure existing solutions, we engineer custom security systems tailored to your exact requirements.
+        </p>
+        <p class="text-slate-300 text-lg">
+          From portable surveillance trailers securing construction sites to sophisticated access control systems protecting corporate campuses, our technology is deployed across industries nationwide. Every system we build reflects our commitment to quality, innovation, and the American manufacturing tradition.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- What Sets Us Apart -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="What Sets Us Apart" 
+      subtitle="Why leading organizations choose Iron Gate over enterprise competitors"
+    />
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <FeatureCard 
+        icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1M12 18h1M7 18h1"/></svg>"
+        title="In-House Manufacturing"
+        description="Complete control over quality, customization, and delivery. Every system built at our Holly Hill, Florida facility to our exact specifications."
+      />
+      <FeatureCard 
+        icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>"
+        title="True Customization"
+        description="Real engineering customization, not just configuration options. Our team designs solutions for your specific requirements, not cookie-cutter packages."
+      />
+      <FeatureCard 
+        icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>"
+        title="Personal Service"
+        description="Direct access to our team, not enterprise call centers. When you call, you talk to people who know your project and care about your success."
+      />
+      <FeatureCard 
+        icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>"
+        title="Competitive Pricing"
+        description="Enterprise-grade technology at up to 25% less than enterprise competitors. Pricing designed for small and mid-market organizations with no subscription lock-in or cloud-only requirements."
+      />
+      <FeatureCard 
+        icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>"
+        title="On-Premise Options"
+        description="Keep your security data on your own infrastructure. Unlike cloud-only competitors, we offer true on-premise deployment for maximum control."
+      />
+      <FeatureCard 
+        icon='<img src="/icons/us-flag.svg" alt="American Flag" width="48" height="32" class="inline-block" />'
+        title="American Advantage"
+        description="Manufactured in America, supported in America. No overseas dependencies, faster support response, and supporting American jobs."
+      />
+    </div>
+  </Section>
+
+  <!-- Our Capabilities -->
+  <Section>
+    <SectionHeader 
+      title="Core Capabilities" 
+    />
+    
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-4">Technology</h3>
+        <ul class="space-y-3 text-slate-300">
+          <li class="flex items-start">
+            <span class="text-igt-cyan mr-3">•</span>
+            <span>AI-powered surveillance with gun detection (under 5 seconds)</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-igt-cyan mr-3">•</span>
+            <span>24/7 operation without external power or WiFi</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-igt-cyan mr-3">•</span>
+            <span>Solar-powered with cellular connectivity</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-igt-cyan mr-3">•</span>
+            <span>Autonomous patrol robots with stair-climbing capability</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-igt-cyan mr-3">•</span>
+            <span>Coordinated drone surveillance systems</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-4">Manufacturing</h3>
+        <ul class="space-y-3 text-slate-300">
+          <li class="flex items-start">
+            <span class="text-igt-cyan mr-3">•</span>
+            <span>Complete in-house production facility</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-igt-cyan mr-3">•</span>
+            <span>Quality control at every stage</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-igt-cyan mr-3">•</span>
+            <span>Rapid prototyping for custom projects</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-igt-cyan mr-3">•</span>
+            <span>US-sourced components when possible</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-igt-cyan mr-3">•</span>
+            <span>Veteran-led production team</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <Section class="bg-slate-950">
+    <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-12 md:p-16 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Meet Our Leadership Team
+      </h2>
+      <p class="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+        Decades of experience in law enforcement, military operations, and technology leadership.
+      </p>
+      <ButtonPrimary href="/team" text="View Our Team" />
+    </div>
+  </Section>
+</BaseLayout>

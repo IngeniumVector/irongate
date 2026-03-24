@@ -1,0 +1,16 @@
+---
+interface Props {
+  icon: string;
+  name: string;
+  href?: string;
+  class?: string;
+}
+
+const { icon, name, href, class: className = '' } = Astro.props;
+const Tag = href ? 'a' : 'div';
+---
+
+<Tag href={href} class={`anim-stagger-item bg-slate-900 border border-slate-800 rounded-lg p-6 text-center hover:border-igt-cyan hover:bg-slate-800 transition-all duration-300 group block ${className}`}>
+  <div class="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300" set:html={icon} aria-hidden="true"></div>
+  <h3 class="text-lg font-semibold text-white">{name}</h3>
+</Tag>

@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  href: string;
+  imageClass?: string;
+  class?: string;
+  srcset?: string;
+  sizes?: string;
+  width?: number;
+  height?: number;
+}
+
+const { 
+  title, 
+  description, 
+  image, 
+  imageAlt, 
+  href, 
+  imageClass = '', 
+  class: className = '',
+  srcset,
+  sizes = '(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw',
+  width = 1536,
+  height = 1024
+} = Astro.props;
+---
+
+<a href={href} aria-label={`Learn more about ${title}`} class={`block group bg-slate-900 border border-slate-800 rounded-lg overflow-hidden hover:border-igt-cyan transition-all duration-300 cursor-pointer ${className}`}>
+  <div class="aspect-video overflow-hidden bg-slate-950">
+    <img 
+      src={image} 
+      alt={imageAlt}
+      class={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${imageClass}`}
+      loading="lazy"
+      width={width}
+      height={height}
+      srcset={srcset}
+      sizes={srcset ? sizes : undefined}
+    />
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-semibold text-white mb-3">{title}</h3>
+    <p class="text-slate-400 mb-4 line-clamp-3">{description}</p>
+    <span class="inline-flex items-center text-igt-cyan font-medium group-hover:text-white transition-colors">
+      Learn More
+      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </span>
+  </div>
+</a>

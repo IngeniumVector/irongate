@@ -1,0 +1,150 @@
+---
+import VerticalPage from '../../layouts/VerticalPage.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+---
+
+<!-- Industry Statistics Sources:
+  - OSHA: Manufacturing and industrial facilities experience 2.1 million workplace injuries annually (BLS data)
+  - Bureau of Labor Statistics: Manufacturing sector workplace fatality rate is 3.3 per 100,000 workers
+  - ASIS International: Industrial facilities report 40%+ of security incidents occur at perimeter access points
+  - Department of Energy: Critical industrial infrastructure faces increasing physical and cyber security threats
+  - National Safety Council: Workplace violence costs US employers $130 billion annually across all industries
+  - NFPA: Industrial fires cause an estimated $1.2 billion in direct property damage annually
+  - Bureau of Labor Statistics: Manufacturing employs 12.9 million workers in the US
+-->
+
+<VerticalPage
+  title="Industrial Facility Security"
+  metaDescription="Comprehensive security for manufacturing plants, industrial facilities, and large-scale operations. Autonomous patrol robots, perimeter surveillance, and access control by Iron Gate Technologies."
+  heroHeadline="Industrial-Grade Security for Industrial Operations"
+  heroSubheadline="Industrial Security"
+  heroDescription="Comprehensive surveillance, access control, and autonomous patrol systems designed for the scale and complexity of industrial facilities. From perimeter fence lines to hazardous areas, Iron Gate covers the full footprint of your operation."
+  painPoints={[
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1M12 18h1M7 18h1"/></svg>",
+      title: "Large Perimeter Monitoring",
+      description: "Industrial facilities often span dozens of acres with miles of fence line, multiple vehicle gates, rail access points, and remote storage areas. Fixed camera systems leave blind spots across these expansive perimeters, particularly at property corners and along back fence lines."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>",
+      title: "Hazardous Area Surveillance",
+      description: "Chemical storage, high-voltage areas, and heavy machinery zones require continuous monitoring for safety compliance and unauthorized access. OSHA regulations under 29 CFR 1910 mandate safety controls in hazardous environments, and surveillance documentation supports compliance verification."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>",
+      title: "Shift-Change Access Management",
+      description: "Manufacturing facilities operating 24/7 with rotating shifts create complex access patterns. Hundreds of employees, contractors, and delivery drivers entering and exiting across multiple shifts require access control that tracks every credential event with audit-ready logs."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>",
+      title: "Asset and Material Protection",
+      description: "Raw materials, finished goods, equipment, and tooling represent millions in assets spread across large facilities. ASIS International reports that over 40% of industrial security incidents occur at perimeter access points where materials enter and leave the facility."
+    }
+  ]}
+  solutions={[
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>",
+      title: "Autonomous Patrol Robots",
+      description: "Self-navigating patrol units that cover large facilities continuously without staffing costs. Stair-climbing capability provides multi-level coverage of production floors, warehouses, and office areas. Autonomous operation 24/7 with real-time alerts."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>",
+      title: "SecMods for Perimeter Coverage",
+      description: "Solar-powered surveillance units positioned along fence lines, at remote gates, and in corners of large properties where fixed camera infrastructure does not reach. No trenching or cabling across active industrial sites."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h1"/><path d="M15 18h2l3-3V8h-5"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>",
+      title: "FreightGuard for Vehicle Tracking",
+      description: "License plate recognition and vehicle tracking at gates, loading areas, and shipping docks. Automated logging of every vehicle entry and exit with timestamp, plate, and direction of travel."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><rect x="9" y="10" width="6" height="5" rx="1"/><path d="M10 10V8a2 2 0 1 1 4 0v2"/></svg>",
+      title: "Multi-Zone Access Control",
+      description: "Tiered access for production floors, hazardous areas, management offices, and server rooms. Different clearance levels by role, shift, and contractor status. Emergency lockdown across individual zones or the entire facility."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>",
+      title: "RaptorNet",
+      description: "Industrial-grade connectivity that extends across large campuses, outdoor areas, and remote buildings. Independent security networks that do not depend on production IT systems or compete for bandwidth."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>",
+      title: "On-Premise Data Architecture",
+      description: "All surveillance and access control data stays on facility-controlled servers. No commercial cloud dependencies. Supports compliance documentation for OSHA, EPA, and industry-specific regulatory requirements."
+    }
+  ]}
+  stats={[
+    { value: "12.9M", label: "US Manufacturing Workers" },
+    { value: "40%+", label: "Incidents at Perimeter Points" },
+    { value: "24/7", label: "Autonomous Patrol Coverage" },
+    { value: "100%", label: "American Manufactured" }
+  ]}
+  differentiators={[
+    {
+      title: "Full Product Suite for Complex Facilities",
+      description: "Industrial operations need more than cameras. Iron Gate provides autonomous patrol robots for large-area coverage, FreightGuard for vehicle tracking, SecMods for perimeter surveillance, access control for every entry point, and network infrastructure to connect it all."
+    },
+    {
+      title: "Autonomous Patrol for Large Footprints",
+      description: "Stair-climbing autonomous robots provide continuous mobile surveillance across facilities that are too large for fixed cameras to cover completely. 24/7 patrol without the staffing costs of security guard rotations."
+    },
+    {
+      title: "Ruggedized, American-Made Hardware",
+      description: "Built in Holly Hill, Florida for industrial environments: dust, heat, vibration, humidity, and the daily reality of manufacturing operations. IP67-rated enclosures protect electronics in conditions that destroy consumer-grade equipment."
+    },
+    {
+      title: "Custom Engineering for Your Facility",
+      description: "Every industrial operation is different. We engineer security configurations for your specific layout, hazard zones, access patterns, and compliance requirements. Not a cookie-cutter platform with limited configuration options."
+    }
+  ]}
+  productLinks={[
+    {
+      name: "Autonomous Patrol Robots",
+      description: "Self-navigating mobile surveillance with stair-climbing capability for large industrial facilities and multi-level operations.",
+      href: "/solutions/autonomous-robots/"
+    },
+    {
+      name: "SecMods",
+      description: "Solar-powered perimeter surveillance for fence lines, remote gates, and areas beyond existing camera infrastructure.",
+      href: "/solutions/secmods/"
+    },
+    {
+      name: "FreightGuard",
+      description: "License plate recognition and vehicle tracking for gates, loading areas, and shipping docks.",
+      href: "/solutions/freightguard/"
+    },
+    {
+      name: "Access Control",
+      description: "Multi-zone entry management with tiered clearance levels, shift-based scheduling, and emergency lockdown.",
+      href: "/solutions/access-control/"
+    }
+  ]}
+  warrantyTiers={[
+    { years: "7 Years", label: "Camera Systems" },
+    { years: "5 Years", label: "SecMod Units" },
+    { years: "3 Years", label: "All Other Systems" }
+  ]}
+  ctaHeadline="Secure Your Industrial Operation"
+  ctaDescription="Our team will design a comprehensive security solution scaled to your facility's footprint, hazard profile, and operational requirements."
+>
+  <!-- Industrial-Specific Section -->
+  <Section>
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader
+        title="Comprehensive Facility Coverage"
+        subtitle="Integrated security across every zone of your operation"
+      />
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-white mb-3">Production Floor Monitoring</h3>
+          <p class="text-slate-400 text-sm">Autonomous patrol robots provide continuous coverage across production areas, identifying safety hazards, unauthorized access to restricted zones, and equipment anomalies. Stair-climbing capability covers mezzanines, catwalks, and multi-level production environments.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-white mb-3">Perimeter and Logistics</h3>
+          <p class="text-slate-400 text-sm">SecMods along fence lines and FreightGuard at vehicle gates create a complete perimeter security layer. Track every vehicle, monitor every access point, and detect breaches along property boundaries that span acres of industrial land.</p>
+        </div>
+      </div>
+    </div>
+  </Section>
+</VerticalPage>

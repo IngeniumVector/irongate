@@ -1,0 +1,197 @@
+---
+import VerticalPage from '../../layouts/VerticalPage.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+---
+
+<!-- Industry Statistics Sources:
+  - DHS CISA: Government facilities are among the 16 critical infrastructure sectors designated by Presidential Policy Directive 21
+  - Federal Protective Service (FPS): Protects 9,000+ federal facilities; reports thousands of security incidents annually
+  - GAO: Federal facility security spending exceeds $2 billion annually
+  - Buy American Act (41 USC 8301-8305): Requires federal agencies to prefer American-made goods in procurement
+  - Trade Agreements Act (19 USC 2501): Governs procurement of products from designated countries
+  - GSA Schedule: Federal procurement vehicle for pre-approved vendors
+  - NIST SP 800-53: Security and Privacy Controls for Federal Information Systems
+  - Executive Order 14017 (2021): America's Supply Chains, emphasizing domestic manufacturing
+-->
+
+<VerticalPage
+  title="Government Facility Security"
+  metaDescription="American-manufactured AI-powered security for federal, state, and local government facilities. DHS-credentialed leadership, 11 security patents, Buy American Act compliant. Iron Gate Technologies."
+  heroHeadline="American-Made Security for Government Facilities"
+  heroSubheadline="Government Security"
+  heroDescription="AI-powered surveillance and access control manufactured in the United States by a team with deep federal security credentials. 11 patents in security technology, on-premise data storage, and hardware built to support Buy American Act procurement requirements."
+  heroBadge="American Manufactured"
+  painPoints={[
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/><line x1="2" y1="18" x2="22" y2="18"/></svg>",
+      title: "Critical Infrastructure Protection",
+      description: "Government facilities are among the 16 critical infrastructure sectors designated by Presidential Policy Directive 21. Federal, state, and local buildings face persistent threats ranging from unauthorized access to targeted attacks, requiring security systems that meet the highest operational standards."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"/><path d="M2 20h20"/><path d="M14 12v.01"/></svg>",
+      title: "Public Building Access Challenges",
+      description: "Government buildings serve the public while maintaining secure operations. Courthouses, administrative offices, and service centers must balance open access with threat screening. Traditional metal detectors and manual screening create bottlenecks and staffing burdens."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>",
+      title: "Federal Procurement Compliance",
+      description: "The Buy American Act (41 USC 8301-8305) requires federal agencies to prefer American-made goods. Executive Order 14017 further emphasizes domestic manufacturing in federal supply chains. Procurement officers need vendors who can document American manufacturing origin."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>",
+      title: "Data Sovereignty and Security Controls",
+      description: "NIST SP 800-53 establishes security controls for federal information systems, including physical and environmental protections. Government agencies require surveillance systems where data stays on government-controlled infrastructure, not third-party commercial clouds."
+    }
+  ]}
+  solutions={[
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>",
+      title: "AI Threat Detection",
+      description: "Computer vision identifies firearms in under 5 seconds at building entries, screening points, and perimeter areas. Automated alerts to facility security and law enforcement without relying on human operators to catch threats on camera feeds."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><rect x="9" y="10" width="6" height="5" rx="1"/><path d="M10 10V8a2 2 0 1 1 4 0v2"/></svg>",
+      title: "Multi-Zone Access Control",
+      description: "Tiered access management for public areas, restricted offices, sensitive compartmented information facilities, and executive spaces. Emergency lockdown capability across individual zones or entire facilities."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>",
+      title: "Autonomous Patrol Systems",
+      description: "Self-navigating patrol robots provide continuous mobile surveillance across government campuses, parking structures, and perimeter areas. Stair-climbing capability covers multi-story facilities autonomously."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>",
+      title: "SecMods for Perimeter Security",
+      description: "Solar-powered surveillance units that deploy to parking areas, fence lines, and remote campus sections without requiring facility infrastructure modifications or IT network integration."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>",
+      title: "On-Premise Data Architecture",
+      description: "All surveillance data stays on government-controlled servers. No commercial cloud dependencies. Supports NIST SP 800-53 physical and environmental protection controls and agency data sovereignty requirements."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>",
+      title: "Network-Independent Operation",
+      description: "Cellular connectivity and solar power mean security systems operate independently from facility networks. Surveillance stays operational during IT incidents, planned maintenance, or network security events."
+    }
+  ]}
+  stats={[
+    { value: "11", label: "Security Technology Patents" },
+    { value: "<5s", label: "Threat Detection Speed" },
+    { value: "100%", label: "American Manufactured" },
+    { value: "28 Yrs", label: "Federal Law Enforcement Experience" }
+  ]}
+  differentiators={[
+    {
+      title: "American-Manufactured Hardware",
+      description: "Every system is built in-house at our Holly Hill, Florida manufacturing facility. Full domestic supply chain documentation supports Buy American Act (41 USC 8301-8305) and Executive Order 14017 procurement requirements. No foreign-manufactured components in critical systems."
+    },
+    {
+      title: "DHS-Credentialed Leadership",
+      description: "Our senior executive team includes 28 years of federal law enforcement experience spanning ICE, Border Patrol, and FLETC instructor roles. This is not theoretical security knowledge. It is operational experience protecting federal facilities and national borders."
+    },
+    {
+      title: "11 Patents in Security Technology",
+      description: "Iron Gate holds 11 patents in security technology, representing genuine innovation rather than repackaged commercial products. Our engineering team designs and builds proprietary solutions that address security challenges other vendors cannot."
+    },
+    {
+      title: "On-Premise Data Sovereignty",
+      description: "Surveillance footage and access control data remain on government-controlled infrastructure at all times. No commercial cloud provider touches government security recordings. Supports NIST SP 800-53, FISMA, and agency-specific data handling requirements."
+    },
+    {
+      title: "GSA Contract Pathway",
+      description: "Iron Gate is positioned for GSA Schedule inclusion, providing federal procurement officers with a direct acquisition path. Our team understands federal procurement timelines, documentation requirements, and contract vehicles."
+    },
+    {
+      title: "Direct Engineering, Not Configuration",
+      description: "Government facilities have unique security requirements that cannot be met by configuring a commercial platform. We engineer custom solutions for specific facility layouts, threat profiles, and operational mandates."
+    }
+  ]}
+  productLinks={[
+    {
+      name: "SecMods",
+      description: "Portable AI-powered surveillance for government campus perimeters, parking structures, and temporary security operations.",
+      href: "/solutions/secmods/"
+    },
+    {
+      name: "Access Control",
+      description: "Multi-zone entry management with tiered clearance levels, emergency lockdown, and comprehensive audit trails.",
+      href: "/solutions/access-control/"
+    },
+    {
+      name: "Autonomous Patrol Robots",
+      description: "Self-navigating mobile surveillance with stair-climbing capability for multi-story government facilities and large campuses.",
+      href: "/solutions/autonomous-robots/"
+    },
+    {
+      name: "FreightGuard",
+      description: "Vehicle tracking and license plate recognition for government motor pools, secure parking areas, and facility entry points.",
+      href: "/solutions/freightguard/"
+    }
+  ]}
+  warrantyTiers={[
+    { years: "7 Years", label: "Camera Systems" },
+    { years: "5 Years", label: "SecMod Units" },
+    { years: "3 Years", label: "All Other Systems" }
+  ]}
+  ctaHeadline="Discuss Your Facility Security Requirements"
+  ctaDescription="Our team, with decades of federal law enforcement experience, will work with your security directorate to design a compliant, American-made solution."
+>
+  <!-- Government Trust Signals Section -->
+  <Section class="bg-slate-950">
+    <div class="max-w-5xl mx-auto">
+      <SectionHeader
+        title="Built for Government Trust"
+        subtitle="Credentials and capabilities that meet the highest standards"
+      />
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6 text-center">
+          <div class="text-4xl mb-4">
+            <img src="/icons/us-flag.svg" alt="American Flag" width="48" height="32" class="inline-block" />
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-3">Buy American Act Ready</h3>
+          <p class="text-slate-400 text-sm">In-house manufacturing at our Holly Hill, Florida facility provides full domestic origin documentation. Our hardware meets Buy American Act procurement requirements for federal acquisitions.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6 text-center">
+          <div class="text-4xl mb-4"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3 class="text-lg font-semibold text-white mb-3">Federal LE Background</h3>
+          <p class="text-slate-400 text-sm">Senior leadership with 28 years of federal law enforcement experience including ICE, U.S. Border Patrol (Employee of the Year 2000), and FLETC instructor credentials. We understand government security from the inside.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6 text-center">
+          <div class="text-4xl mb-4"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h12a2 2 0 0 0 2-2v-2H10v2a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v3h4"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/></svg></div>
+          <h3 class="text-lg font-semibold text-white mb-3">11 Security Patents</h3>
+          <p class="text-slate-400 text-sm">Proprietary technology protected by 11 patents in security systems. Our solutions are engineered from the ground up, not assembled from off-the-shelf components and rebranded.</p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Government Use Cases -->
+  <Section>
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader
+        title="Serving Every Level of Government"
+        subtitle="Security solutions for federal, state, and local facilities"
+      />
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-white mb-3">Federal Facilities</h3>
+          <p class="text-slate-400 text-sm">Office buildings, courthouses, and service centers require security that meets NIST, FISMA, and agency-specific standards. American-manufactured hardware with on-premise data storage supports federal compliance mandates. Our leadership's DHS background means we speak the language of federal security operations.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-white mb-3">State and Local Government</h3>
+          <p class="text-slate-400 text-sm">City halls, county offices, public works facilities, and community centers serve the public while managing access and protecting staff. Portable SecMod units provide cost-effective coverage for facilities that cannot justify permanent enterprise installations. Competitive pricing works within municipal budget cycles.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-white mb-3">Law Enforcement and Public Safety</h3>
+          <p class="text-slate-400 text-sm">Police stations, evidence storage facilities, and public safety operations centers require restricted access and continuous monitoring. Tiered access control, autonomous patrol units, and AI threat detection provide layered protection for sensitive law enforcement environments.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6">
+          <h3 class="text-lg font-semibold text-white mb-3">Critical Infrastructure</h3>
+          <p class="text-slate-400 text-sm">Water treatment plants, power substations, and transportation hubs require perimeter security in remote locations with limited infrastructure. Solar-powered, cellular-connected SecMods provide autonomous monitoring without facility modifications or network dependencies.</p>
+        </div>
+      </div>
+    </div>
+  </Section>
+</VerticalPage>

@@ -1,0 +1,355 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+import FeatureCard from '../../components/cards/FeatureCard.astro';
+import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
+---
+
+<BaseLayout 
+  title="YachtGuard Marine Security Systems" 
+  description="Purpose-built security for boats and yachts. Salt-resistant, portable surveillance with suction cup mounting. No drilling required."
+>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" is:inline>
+
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://irongate.world/solutions/yachtguard/#product",
+  "name": "ES Iron Gate Technologies YachtGuard",
+  "description": "Marine-grade security system built for boats and yachts. Salt-resistant housing with suction cup mounting, 4K surveillance, and remote monitoring from anywhere.",
+  "brand": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "manufacturer": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "category": "Marine Security Systems",
+  "image": [
+    "https://irongate.world/images/products/Yachtguard.webp",
+    "https://irongate.world/images/products/Yachtguard_Black.webp"
+  ],
+  "url": "https://irongate.world/solutions/yachtguard/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Mounting",
+      "value": "Suction cup (no drilling)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Weather Resistance",
+      "value": "Salt-resistant, marine-grade"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Camera Resolution",
+      "value": "4K Ultra HD"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Portability",
+      "value": "Fully portable"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Manufacturing",
+      "value": "Made in USA (Holly Hill, FL)"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "USD",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "USD",
+      "valueAddedTaxIncluded": false
+    },
+    "warranty": {
+      "@type": "WarrantyPromise",
+      "durationOfWarranty": {
+        "@type": "QuantitativeValue",
+        "value": 3,
+        "unitCode": "ANN"
+      },
+      "warrantyScope": "YachtGuard Systems"
+    },
+    "seller": {
+      "@id": "https://irongate.world/#organization"
+    }
+  }
+}
+
+  </script>
+    <!-- FAQPage Schema (GEO) -->
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will YachtGuard damage my boat's hull or gelcoat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. YachtGuard uses industrial-grade suction cup mounting that requires no drilling, screws, or permanent modifications. It attaches securely and removes cleanly, leaving no marks on your hull or gelcoat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I monitor my yacht from anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. YachtGuard streams live 4K video to your phone through cellular connectivity. Whether your boat is docked or at anchor, you can check the feed from anywhere in the world with an internet connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is YachtGuard built for saltwater environments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. YachtGuard features marine-grade, salt-resistant housing designed to withstand constant spray and harsh marine conditions. All components are weather-sealed for extended exposure to saltwater environments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How portable is YachtGuard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Extremely portable. YachtGuard is designed to be moved between vessels. The suction cup mounting system lets you reposition the unit in minutes, making it ideal for charter fleets or owners with multiple boats."
+      }
+    }
+  ]
+}
+    </script>
+
+  <!-- Hero with Background Image -->
+  <section class="relative min-h-[60vh] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="/images/products/Yachtguard.webp"
+        srcset="/images/products/Yachtguard-640w.webp 640w, /images/products/Yachtguard-1024w.webp 1024w, /images/products/Yachtguard.webp 1400w"
+        sizes="100vw"
+        alt="YachtGuard marine security camera system in white housing"
+        width="1400"
+        height="1050"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10 py-24">
+      <div class="max-w-3xl bg-black/75 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+        <p class="text-igt-cyan font-semibold mb-4 tracking-wide uppercase text-sm">Marine Security</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">YachtGuard</h1>
+        <p class="text-xl text-slate-300 mb-8 max-w-2xl">Purpose-built security for boats and yachts. Salt-resistant, portable surveillance with suction cup mounting. Protect your investment whether docked or at anchor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Answer-First Paragraph (GEO) -->
+  <section class="bg-slate-950 pt-12 pb-0">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <p class="text-lg text-slate-300 max-w-3xl mx-auto text-center mb-12">Iron Gate YachtGuard is a marine-grade security system built for boats and yachts. Salt-resistant housing with suction cup mounting requires no drilling. YachtGuard provides 4K surveillance with remote monitoring from anywhere in the world, engineered for waterfront and open-water environments.</p>
+    </div>
+  </section>
+
+  <!-- Challenge / Solution -->
+  <Section class="bg-slate-950">
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader 
+        title="The Challenge" 
+        subtitle="Protecting vessels is uniquely difficult" 
+      />
+      <p class="text-slate-400 text-lg text-center mb-12">
+Yachts and boats are vulnerable targets. They're often unattended for long periods, located in remote marinas, and expensive to replace. Traditional security systems fail in marine environments due to corrosion, require permanent installation that damages vessels, and often lack reliable power sources.
+</p>
+      <SectionHeader 
+        title="The Solution" 
+        subtitle="Security designed for the water" 
+      />
+      <p class="text-slate-400 text-lg text-center">
+YachtGuard solves these problems with marine-specific engineering. Salt-resistant materials prevent corrosion. Suction cup mounting means no drilling or damage to your vessel. Solar charging with extended battery backup keeps surveillance active even during weeks at anchor. Monitor your boat from anywhere with cellular connectivity.
+</p>
+    </div>
+  </Section>
+
+  <!-- Capabilities -->
+  <Section>
+    <SectionHeader 
+      title="Capabilities" 
+      subtitle="Built for life on the water" 
+    />
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="22"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>" title="Marine-Grade Construction" description="Salt-resistant materials and corrosion-proof housings. Built specifically for harsh marine environments with UV protection and waterproof seals." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>" title="Suction Cup Mounting" description="No drilling, no permanent installation. Industrial-strength suction cups secure the system to any smooth surface. Easy to move between vessels." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>" title="Remote Monitoring" description="Check on your vessel from anywhere in the world. Live video streaming, motion alerts, and two-way audio communication through your smartphone." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>" title="Weather Resistant" description="Tested for storms, spray, and submersion. IP68 rating provides complete protection against water ingress. Operates in temperature extremes." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" y1="11" x2="22" y2="13"/><line x1="6" y1="11" x2="6" y2="13"/><line x1="10" y1="11" x2="10" y2="13"/></svg>" title="Long Battery Life" description="Solar charging with extended battery backup. Maintain surveillance even during long periods without sunlight. Low-power mode conserves energy." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21h14"/><path d="M12 3v1M3 12h1M20 12h1M5.6 5.6l.7.7M18.4 5.6l-.7.7"/></svg>" title="Instant Alerts" description="Immediate notification when motion is detected. Differentiate between normal activity and potential threats. GPS tracking if unit is moved." />
+    </div>
+  </Section>
+
+
+  <!-- Mid-Page CTA -->
+  <div class="text-center py-12 bg-slate-950/50 border-y border-slate-800">
+    <p class="text-slate-400 mb-4">Ready to see how Iron Gate can protect your operation?</p>
+    <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+  </div>
+
+  <!-- Technical Specifications -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Technical Specifications" 
+      subtitle="Marine-grade performance" 
+    />
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-slate-800">
+        <div class="divide-y divide-slate-800">
+          <div class="spec-row">
+            <span class="text-slate-400">Camera Resolution</span>
+            <span class="text-white font-medium">Up to 4K Ultra HD</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Night Vision</span>
+            <span class="text-white font-medium">Infrared with Marine Coating</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Power Source</span>
+            <span class="text-white font-medium">Solar + Extended Battery Backup</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Connectivity</span>
+            <span class="text-white font-medium">4G LTE Cellular</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Weather Rating</span>
+            <span class="text-white font-medium">IP68 / Salt Spray Resistant</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Mounting</span>
+            <span class="text-white font-medium">Industrial Suction Cup (No Drilling)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Operating Temperature</span>
+            <span class="text-white font-medium">-4°F to 140°F</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">GPS Tracking</span>
+            <span class="text-white font-medium">Built-in with Geofencing</span>
+          </div>
+        </div>
+      </div>
+      <p class="text-slate-400 text-sm text-center mt-6">
+Specifications vary by configuration. Contact us for detailed specs matching your vessel requirements.
+</p>
+    </div>
+  </Section>
+
+  <!-- Real Deployments -->
+  <Section>
+    <SectionHeader 
+      title="YachtGuard in Action" 
+      subtitle="Protecting vessels at marinas and docks" 
+    />
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <img src="/images/products/yachtguard-dock-a.webp" srcset="/images/products/yachtguard-dock-a-640w.webp 640w, /images/products/yachtguard-dock-a.webp 1400w" sizes="(max-width: 768px) 100vw, 50vw" alt="YachtGuard system mounted on a marina dock" width="1400" height="1050" loading="lazy" class="rounded-lg border border-slate-800" />
+      <img src="/images/products/yachtguard-dock-fuel.webp" srcset="/images/products/yachtguard-dock-fuel-640w.webp 640w, /images/products/yachtguard-dock-fuel.webp 1400w" sizes="(max-width: 768px) 100vw, 50vw" alt="YachtGuard monitoring a fuel dock at a marina" width="1400" height="1050" loading="lazy" class="rounded-lg border border-slate-800" />
+    </div>
+  </Section>
+
+  <!-- Perfect For -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Perfect For" 
+      subtitle="Ideal use cases for YachtGuard" 
+    />
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Marina Storage</h3>
+        <p class="text-slate-400">
+Monitor your vessel while docked. Receive instant alerts if someone boards. Review footage remotely to verify maintenance visits. Deter theft with visible surveillance.
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Charter Operations</h3>
+        <p class="text-slate-400">
+Protect your fleet when vessels are rented. Monitor guest activity and ensure proper use. Verify condition between rentals. Increase accountability with recorded evidence.
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Long-Term Anchoring</h3>
+        <p class="text-slate-400">
+Secure your yacht during extended stays. Solar power ensures continuous operation without shore power. Cellular connectivity lets you check in from anywhere.
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">High-Value Assets</h3>
+        <p class="text-slate-400">
+Luxury yachts require premium protection. YachtGuard provides enterprise-grade security without enterprise-grade installation costs or complexity.
+</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Warranty -->
+  <div class="max-w-3xl mx-auto mt-8">
+    <div class="bg-slate-900/50 border border-slate-800 rounded-lg p-4 flex items-center justify-center gap-4">
+      <div class="text-2xl font-bold text-igt-cyan">3-Year Warranty</div>
+      <div class="text-slate-400 text-sm">on all YachtGuard components</div>
+    </div>
+    <p class="text-slate-400 text-sm text-center mt-4">If something does go wrong, our overnight RMA program ships a replacement unit the next business day. Every Iron Gate customer has access to our 24/7 dedicated support line. No call centers, no ticket queues.</p>
+  </div>
+
+
+  <!-- FAQ Section (GEO) -->
+  <Section class="bg-slate-950">
+    <SectionHeader title="Frequently Asked Questions" />
+    <div class="max-w-3xl mx-auto space-y-4">
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Will YachtGuard damage my boat's hull or gelcoat?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">No. YachtGuard uses industrial-grade suction cup mounting that requires no drilling, screws, or permanent modifications. It attaches securely and removes cleanly, leaving no marks on your hull or gelcoat.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Can I monitor my yacht from anywhere?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. YachtGuard streams live 4K video to your phone through cellular connectivity. Whether your boat is docked or at anchor, you can check the feed from anywhere in the world with an internet connection.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Is YachtGuard built for saltwater environments?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. YachtGuard features marine-grade, salt-resistant housing designed to withstand constant spray and harsh marine conditions. All components are weather-sealed for extended exposure to saltwater environments.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        How portable is YachtGuard?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Extremely portable. YachtGuard is designed to be moved between vessels. The suction cup mounting system lets you reposition the unit in minutes, making it ideal for charter fleets or owners with multiple boats.</p>
+    </details>
+    </div>
+  </Section>
+  <!-- CTA -->
+  <section class="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-black">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+Protect Your Vessel with YachtGuard
+</h2>
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+No drilling. No damage. No complexity. Just reliable marine security that works when you need it.
+</p>
+        <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

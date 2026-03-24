@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+import FeatureCard from '../../components/cards/FeatureCard.astro';
+import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
+---
+
+<BaseLayout 
+  title="FreightGuard Cargo and Logistics Security" 
+  description="Intelligent security for warehouses, trucks, and shipping containers. GPS tracking, tamper detection, and environmental monitoring for cargo protection."
+>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" is:inline>
+
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://irongate.world/solutions/freightguard/#product",
+  "name": "ES Iron Gate Technologies FreightGuard",
+  "description": "Intelligent security platform for warehouses, trucks, and shipping containers. Real-time cargo tracking, tamper detection, and license plate recognition in a single system.",
+  "brand": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "manufacturer": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "category": "Logistics Security Systems",
+  "image": "https://irongate.world/images/products/Freightguard.webp",
+  "url": "https://irongate.world/solutions/freightguard/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Tracking",
+      "value": "GPS tracking and license plate recognition"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Detection",
+      "value": "Tamper detection and environmental monitoring"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Coverage",
+      "value": "Warehouses, trucks, shipping containers"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Manufacturing",
+      "value": "Made in USA (Holly Hill, FL)"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "USD",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "USD",
+      "valueAddedTaxIncluded": false
+    },
+    "warranty": {
+      "@type": "WarrantyPromise",
+      "durationOfWarranty": {
+        "@type": "QuantitativeValue",
+        "value": 3,
+        "unitCode": "ANN"
+      },
+      "warrantyScope": "FreightGuard Systems"
+    },
+    "seller": {
+      "@id": "https://irongate.world/#organization"
+    }
+  }
+}
+
+  </script>
+
+  <!-- Dataset: Field Reliability Data -->
+  <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "ES Iron Gate Technologies FreightGuard Field Reliability Data",
+  "description": "Field failure rate measured across all deployed FreightGuard cargo security units",
+  "creator": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "https://irongate.world/solutions/freightguard/",
+    "encodingFormat": "text/html"
+  },
+  "variableMeasured": "Field failure rate",
+  "measurementTechnique": "Operational monitoring of deployed FreightGuard units"
+}
+  </script>
+    <!-- FAQPage Schema (GEO) -->
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can FreightGuard track cargo in transit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. FreightGuard provides real-time tracking from origin to destination. The system monitors shipments with tamper detection, unauthorized access alerts, and location tracking throughout the supply chain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FreightGuard work on shipping containers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. FreightGuard is designed for warehouses, trucks, distribution centers, and shipping containers. It adapts to different form factors with mounting options engineered for each environment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is FreightGuard's field failure rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FreightGuard maintains a documented 0.77% field failure rate. Every unit is tested before shipping, and the overnight RMA program ensures fast replacement if any issue occurs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FreightGuard include license plate recognition?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. FreightGuard includes AI-powered license plate recognition and vehicle tracking to monitor all vehicle activity at warehouses, freight yards, and distribution centers."
+      }
+    }
+  ]
+}
+    </script>
+
+  <!-- Hero with Background Image -->
+  <section class="relative min-h-[60vh] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="/images/products/Freightguard.webp"
+        srcset="/images/products/Freightguard-640w.webp 640w, /images/products/Freightguard-1024w.webp 1024w, /images/products/Freightguard.webp 1400w"
+        sizes="100vw"
+        alt="FreightGuard cargo security unit"
+        width="1400"
+        height="1050"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10 py-24">
+      <div class="max-w-3xl bg-black/75 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+        <p class="text-igt-cyan font-semibold mb-4 tracking-wide uppercase text-sm">Cargo Security</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">FreightGuard</h1>
+        <p class="text-xl text-slate-300 mb-8 max-w-2xl">Intelligent security for warehouses, trucks, and shipping containers. Real-time tracking, tamper detection, and cargo monitoring from origin to destination.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Answer-First Paragraph (GEO) -->
+  <section class="bg-slate-950 pt-12 pb-0">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <p class="text-lg text-slate-300 max-w-3xl mx-auto text-center mb-12">Iron Gate FreightGuard is an intelligent security platform for warehouses, trucks, and shipping containers. It combines real-time cargo tracking, tamper detection, and license plate recognition in a single system. FreightGuard monitors shipments from origin to destination with AI-powered alerts for unauthorized access.</p>
+    </div>
+  </section>
+
+  <!-- Challenge / Solution -->
+  <Section class="bg-slate-950">
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader 
+        title="The Challenge" 
+        subtitle="Cargo disappears in the supply chain" 
+      />
+      <p class="text-slate-400 text-lg text-center mb-12">
+Over $15 billion in cargo is stolen annually in the U.S. alone. Trailers vanish from truck stops. Containers are breached during transport. Temperature-sensitive goods spoil due to equipment failures. By the time theft or damage is discovered, recovery is nearly impossible and insurance claims turn into disputes over when and where loss occurred.
+</p>
+      <SectionHeader 
+        title="The Solution" 
+        subtitle="Visibility from origin to destination" 
+      />
+      <p class="text-slate-400 text-lg text-center">
+FreightGuard provides continuous monitoring throughout the supply chain. With a documented 0.77% field failure rate, our units are built for the demands of round-the-clock logistics operations. GPS tracking pinpoints location in real-time. Tamper sensors alert immediately when cargo is accessed unexpectedly. Environmental monitoring protects temperature-sensitive shipments. When incidents occur, you have timestamped evidence for rapid response and ironclad insurance claims. Prevention through visibility, and documentation when needed.
+</p>
+    </div>
+  </Section>
+
+  <!-- Capabilities -->
+  <Section>
+    <SectionHeader 
+      title="Capabilities" 
+      subtitle="Complete cargo visibility" 
+    />
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <FeatureCard icon="<svg class="w-6 h-6 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>" title="Real-Time GPS Tracking" description="Track shipments in real-time with precision GPS. Geofencing alerts when cargo deviates from planned routes. Historical route playback for audits and optimization." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21h14"/><path d="M12 3v1M3 12h1M20 12h1M5.6 5.6l.7.7M18.4 5.6l-.7.7"/></svg>" title="Tamper Detection" description="Instant alerts when containers are opened unexpectedly. Door sensors, motion detection, and seal monitoring. Know immediately if cargo integrity is compromised." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>" title="Interior Surveillance" description="Monitor cargo conditions with interior cameras. Night vision for 24/7 visibility. Verify loading procedures and inspect cargo remotely without opening containers." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg>" title="Environmental Monitoring" description="Temperature, humidity, and shock sensors protect sensitive cargo. Automated alerts for out-of-range conditions. Compliance documentation for regulated shipments." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>" title="Electronic Seals" description="Smart seals with tamper-evident technology. Automatic notification if broken or removed. Chain of custody verification for high-value shipments." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h1"/><path d="M15 18h2l3-3V8h-5"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>" title="Multi-Modal Support" description="Works across truck, rail, and maritime transport. Cellular and satellite connectivity for global coverage. Seamless tracking through intermodal transfers." />
+    </div>
+  </Section>
+
+
+  <!-- Mid-Page CTA -->
+  <div class="text-center py-12 bg-slate-950/50 border-y border-slate-800">
+    <p class="text-slate-400 mb-4">Ready to see how Iron Gate can protect your operation?</p>
+    <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+  </div>
+
+  <!-- Technical Specifications -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Technical Specifications" 
+      subtitle="Enterprise-grade logistics monitoring" 
+    />
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-slate-800">
+        <div class="divide-y divide-slate-800">
+          <div class="spec-row">
+            <span class="text-slate-400">GPS Accuracy</span>
+            <span class="text-white font-medium">Sub-10 Meter Precision</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Battery Life</span>
+            <span class="text-white font-medium">Up to 90 Days (Standard Mode)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Connectivity</span>
+            <span class="text-white font-medium">Cellular + Satellite Backup</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Camera Resolution</span>
+            <span class="text-white font-medium">1080p HD with Night Vision</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Environmental Range</span>
+            <span class="text-white font-medium">-40°F to 185°F</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Shock Detection</span>
+            <span class="text-white font-medium">G-Force Monitoring</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Tamper Alerts</span>
+            <span class="text-white font-medium">Real-Time Notification</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Mounting</span>
+            <span class="text-white font-medium">Magnetic, Bolt-On, or Portable</span>
+          </div>
+        </div>
+      </div>
+      <p class="text-slate-400 text-sm text-center mt-6">
+Specifications vary by configuration. Contact us for detailed specs matching your cargo requirements.
+</p>
+    </div>
+  </Section>
+
+  <!-- Applications -->
+  <Section>
+    <SectionHeader 
+      title="Applications" 
+      subtitle="Protect what you ship" 
+    />
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800 hover:border-igt-cyan transition-colors">
+        <h3 class="text-xl font-semibold text-white mb-3">High-Value Cargo</h3>
+        <p class="text-slate-400">Electronics, pharmaceuticals, and luxury goods require premium protection. FreightGuard provides continuous monitoring, deterring theft and documenting chain of custody for insurance claims.</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800 hover:border-igt-cyan transition-colors">
+        <h3 class="text-xl font-semibold text-white mb-3">Cold Chain Logistics</h3>
+        <p class="text-slate-400">Temperature-sensitive shipments need constant monitoring. Automated alerts prevent spoilage. Complete temperature logs satisfy regulatory requirements and customer guarantees.</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800 hover:border-igt-cyan transition-colors">
+        <h3 class="text-xl font-semibold text-white mb-3">Cross-Border Shipments</h3>
+        <p class="text-slate-400">International freight faces higher theft risk and longer transit times. Satellite connectivity maintains tracking through remote areas. Customs documentation with tamper-proof records.</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Warranty -->
+  <div class="max-w-3xl mx-auto mt-8">
+    <div class="bg-slate-900/50 border border-slate-800 rounded-lg p-4 flex items-center justify-center gap-4">
+      <div class="text-2xl font-bold text-igt-cyan">3-Year Warranty</div>
+      <div class="text-slate-400 text-sm">on all FreightGuard components</div>
+    </div>
+    <p class="text-slate-400 text-sm text-center mt-4">If something does go wrong, our overnight RMA program ships a replacement unit the next business day. Every Iron Gate customer has access to our 24/7 dedicated support line. No call centers, no ticket queues.</p>
+  </div>
+
+
+  <!-- FAQ Section (GEO) -->
+  <Section class="bg-slate-950">
+    <SectionHeader title="Frequently Asked Questions" />
+    <div class="max-w-3xl mx-auto space-y-4">
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Can FreightGuard track cargo in transit?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. FreightGuard provides real-time tracking from origin to destination. The system monitors shipments with tamper detection, unauthorized access alerts, and location tracking throughout the supply chain.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Does FreightGuard work on shipping containers?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. FreightGuard is designed for warehouses, trucks, distribution centers, and shipping containers. It adapts to different form factors with mounting options engineered for each environment.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        What is FreightGuard's field failure rate?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">FreightGuard maintains a documented 0.77% field failure rate. Every unit is tested before shipping, and the overnight RMA program ensures fast replacement if any issue occurs.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Does FreightGuard include license plate recognition?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. FreightGuard includes AI-powered license plate recognition and vehicle tracking to monitor all vehicle activity at warehouses, freight yards, and distribution centers.</p>
+    </details>
+    </div>
+  </Section>
+  <!-- CTA -->
+  <section class="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-black">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+Secure Your Supply Chain with FreightGuard
+</h2>
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+Stop losing cargo to theft and damage. Get complete visibility from warehouse to delivery with FreightGuard monitoring.
+</p>
+        <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

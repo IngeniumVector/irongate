@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/layout/Hero.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+import IndustryCard from '../../components/cards/IndustryCard.astro';
+import ProductCard from '../../components/cards/ProductCard.astro';
+import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
+---
+
+<BaseLayout 
+  title="Industries We Serve" 
+  description="Iron Gate Technologies provides vertical-specific security solutions for construction, marine, healthcare, government, logistics, education, commercial, industrial, and houses of worship."
+>
+  <Hero 
+    variant="centered"
+    title="Industries We Serve"
+    description="Vertical-specific security solutions designed for the unique challenges of your environment. Every industry has different risks, regulations, and requirements. We engineer systems that address yours."
+  />
+
+  <!-- Industries Grid: 5-over-4 layout -->
+  <Section>
+    <SectionHeader 
+      title="Your Industry, Our Expertise" 
+      subtitle="Select your industry to see how Iron Gate addresses your specific security challenges"
+    />
+    
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><rect x="9" y="12" width="6" height="8"/><path d="M3 20h2M19 20h2"/></svg>" name="Construction" href="/solutions/construction/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="22"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>" name="Marine and Marinas" href="/solutions/marine/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22V8l-6-6-6 6v14"/><path d="M2 22h20"/><path d="M10 22v-4a2 2 0 1 1 4 0v4"/><path d="M12 2v4"/><path d="M9 4h6"/></svg>" name="Houses of Worship" href="/solutions/churches/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>" name="Schools and Education" href="/solutions/schools/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v4"/><path d="M10 8h4"/><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M4 6h2M18 6h2"/><path d="M8 18h2M14 18h2"/><path d="M8 14h2M14 14h2"/></svg>" name="Healthcare" href="/solutions/healthcare/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/><line x1="2" y1="18" x2="22" y2="18"/></svg>" name="Government" href="/solutions/government/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h1"/><path d="M15 18h2l3-3V8h-5"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>" name="Logistics and Warehousing" href="/solutions/logistics/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg>" name="Commercial Properties" href="/solutions/commercial/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1M12 18h1M7 18h1"/></svg>" name="Industrial" href="/solutions/industrial/" />
+    </div>
+  </Section>
+
+  <!-- Solutions Showcase -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Our Product Line" 
+      subtitle="The technology behind your industry-specific security solution"
+    />
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <ProductCard 
+        title="SecMods"
+        description="Portable AI-powered surveillance trailers that deploy in minutes. Solar-powered, cellular-connected, and built for the toughest environments."
+        image="/images/products/secmod-logo.webp"
+        srcset="/images/products/secmod-logo-640w.webp 640w, /images/products/secmod-logo.webp 1536w"
+        imageAlt="SecMods portable surveillance system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/secmods/"
+      />
+      
+      <ProductCard 
+        title="YachtGuard"
+        description="Purpose-built security for boats and yachts. Marine-grade construction, suction-cup mounting, and 24/7 remote monitoring."
+        image="/images/products/yachtguard-logo.webp"
+        srcset="/images/products/yachtguard-logo-640w.webp 640w, /images/products/yachtguard-logo.webp 1536w"
+        imageAlt="YachtGuard marine security system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/yachtguard/"
+      />
+      
+      <ProductCard 
+        title="Access Control"
+        description="Control who enters your facility with card readers, biometrics, and mobile credentials. Cloud-managed for flexibility, on-premise for security."
+        image="/images/products/access-control-logo.webp"
+        srcset="/images/products/access-control-logo-640w.webp 640w, /images/products/access-control-logo.webp 1536w"
+        imageAlt="Access Control entry management system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/access-control/"
+      />
+      
+      <ProductCard 
+        title="Falcon Strike"
+        description="Helicopter-mounted tactical surveillance for search and rescue, disaster recon, and border security. Five-minute installation on UH-60 Blackhawk platforms."
+        image="/images/products/falcon-strike-logo.webp"
+        srcset="/images/products/falcon-strike-logo-640w.webp 640w, /images/products/falcon-strike-logo.webp 1536w"
+        imageAlt="Falcon Strike aerial surveillance system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/falcon-strike/"
+      />
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mt-8">
+      <ProductCard 
+        title="FreightGuard"
+        description="Intelligent security for warehouses, distribution centers, and freight yards. License plate recognition, vehicle tracking, and AI-powered threat detection."
+        image="/images/products/freightguard-logo.webp"
+        srcset="/images/products/freightguard-logo-640w.webp 640w, /images/products/freightguard-logo.webp 1536w"
+        imageAlt="FreightGuard logistics security system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/freightguard/"
+      />
+      
+      <ProductCard 
+        title="Autonomous Robots"
+        description="Self-navigating patrol units that provide mobile surveillance and WiFi coverage across large properties. Solar-powered and completely autonomous."
+        image="/images/products/autonomous-robot-logo.webp"
+        srcset="/images/products/autonomous-robot-logo-640w.webp 640w, /images/products/autonomous-robot-logo.webp 1536w"
+        imageAlt="Autonomous patrol robot logo"
+        width={1536}
+        height={1024}
+        href="/solutions/autonomous-robots/"
+      />
+      
+      <ProductCard 
+        title="RaptorNet"
+        description="Industrial-grade WiFi and broadband solutions that power your security infrastructure. Extend coverage to remote areas without existing connectivity."
+        image="/images/products/raptornet-logo.webp"
+        srcset="/images/products/raptornet-logo-640w.webp 640w, /images/products/raptornet-logo.webp 1536w"
+        imageAlt="RaptorNet network infrastructure logo"
+        width={1536}
+        height={1024}
+        href="/solutions/network-infrastructure/"
+      />
+    </div>
+  </Section>
+
+  <!-- CTA -->
+  <Section>
+    <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-12 md:p-16 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Ready to Discuss Your Security Needs?
+      </h2>
+      <p class="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+        Our team will help you design the perfect security solution for your property.
+      </p>
+      <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+    </div>
+  </Section>
+</BaseLayout>

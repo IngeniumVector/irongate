@@ -1,0 +1,399 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+import FeatureCard from '../../components/cards/FeatureCard.astro';
+import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
+---
+
+<BaseLayout 
+  title="Access Control Entry Management Systems" 
+  description="Control who enters your facility with integrated access control and surveillance. Customizable credentials, audit trails, and remote management."
+>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" is:inline>
+
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://irongate.world/solutions/access-control/#product",
+  "name": "ES Iron Gate Technologies Access Control",
+  "description": "Entry management system integrating smart credentials, biometric readers, and photo verification. Scales from single doors to enterprise campuses with cloud or on-premise management.",
+  "brand": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "manufacturer": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "category": "Access Control Systems",
+  "image": [
+    "https://irongate.world/images/products/Access_Control_Black.webp",
+    "https://irongate.world/images/products/Access_Control_Red.webp"
+  ],
+  "url": "https://irongate.world/solutions/access-control/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Authentication",
+      "value": "Biometrics, mobile credentials, key cards"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Management",
+      "value": "Cloud or on-premise options"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Integration",
+      "value": "Integrated with surveillance systems"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Manufacturing",
+      "value": "Made in USA (Holly Hill, FL)"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "USD",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "USD",
+      "valueAddedTaxIncluded": false
+    },
+    "warranty": {
+      "@type": "WarrantyPromise",
+      "durationOfWarranty": {
+        "@type": "QuantitativeValue",
+        "value": 3,
+        "unitCode": "ANN"
+      },
+      "warrantyScope": "Access Control Systems"
+    },
+    "seller": {
+      "@id": "https://irongate.world/#organization"
+    }
+  }
+}
+
+  </script>
+    <!-- FAQPage Schema (GEO) -->
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can Iron Gate Access Control integrate with existing security cameras?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Iron Gate's Access Control system integrates with our surveillance products and can work alongside existing camera infrastructure. Every entry event is logged with photo verification and a complete audit trail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Access Control support both cloud and on-premise management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can manage the system through cloud-based software or keep everything on-premise for organizations that require full data sovereignty. This flexibility sets Iron Gate apart from cloud-only competitors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Access Control scale from a single door to a full campus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The system is modular. Start with a single entry point and expand to an entire campus without replacing hardware. Each additional door integrates into the same management platform with centralized control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of credentials does the system support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Iron Gate Access Control supports smart cards, mobile credentials, biometric readers, and PIN codes. You can combine multiple credential types for different access levels across your facility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the access control system still work during an internet outage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Iron Gate Access Control units cache credentials and access rules locally. During an internet outage, readers continue to authenticate users and operate locks. Event logs sync to the cloud automatically once connectivity is restored. No entry is missed."
+      }
+    }
+  ]
+}
+    </script>
+
+  <!-- Hero with Background Image -->
+  <section class="relative min-h-[60vh] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="/images/products/Access_Control_Black.webp"
+        srcset="/images/products/Access_Control_Black-640w.webp 640w, /images/products/Access_Control_Black.webp 1400w"
+        sizes="100vw"
+        alt="Iron Gate access control reader in black finish"
+        width="1400"
+        height="1050"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10 py-24">
+      <div class="max-w-3xl bg-black/75 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+        <p class="text-igt-cyan font-semibold mb-4 tracking-wide uppercase text-sm">Entry Management</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Access Control</h1>
+        <p class="text-xl text-slate-300 mb-8 max-w-2xl">Control who enters your facility with smart, integrated access management. From single doors to enterprise campuses, our systems provide security without complexity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Answer-First Paragraph (GEO) -->
+  <section class="bg-slate-950 pt-12 pb-0">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <p class="text-lg text-slate-300 max-w-3xl mx-auto text-center mb-12">Iron Gate Access Control is an entry management system integrating smart credentials, biometric readers, and photo verification. It scales from single doors to enterprise campuses with full audit trails. The system supports both cloud and on-premise management for complete data sovereignty.</p>
+    </div>
+  </section>
+
+  <!-- Challenge / Solution -->
+  <Section class="bg-slate-950">
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader 
+        title="The Challenge" 
+        subtitle="Traditional locks aren't enough" 
+      />
+      <p class="text-slate-400 text-lg text-center mb-12">
+Physical keys are easy to copy, impossible to track, and create security nightmares when employees leave. You have no record of who entered when, no way to revoke access remotely, and no integration with surveillance systems. Managing access across multiple doors or locations becomes an operational burden.
+</p>
+      <SectionHeader 
+        title="The Solution" 
+        subtitle="Intelligent access management" 
+      />
+      <p class="text-slate-400 text-lg text-center">
+Iron Gate's access control systems bring accountability and intelligence to facility security. Every entry creates an audit trail with photo verification. Grant or revoke access instantly from your phone. Set schedules and permissions that adapt to your operations. Integrate with existing surveillance for complete security visibility.
+</p>
+    </div>
+  </Section>
+
+  <!-- Capabilities -->
+  <Section>
+    <SectionHeader 
+      title="Capabilities" 
+      subtitle="Enterprise features, simple deployment" 
+    />
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><rect x="9" y="10" width="6" height="5" rx="1"/><path d="M10 10V8a2 2 0 1 1 4 0v2"/></svg>" title="Multiple Credential Types" description="Support for proximity cards, biometric readers, PIN codes, and mobile credentials. Choose the authentication method that fits your security requirements and user preferences." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>" title="Integrated Surveillance" description="Every access event triggers camera recording. Visual verification of who entered when. Automatic alerts for unauthorized access attempts with photo evidence." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>" title="Customizable Rules" description="Set access schedules by user, door, or group. Create temporary credentials for contractors. Automatic lockdowns during emergencies. Flexible permissions for any scenario." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>" title="Detailed Audit Trails" description="Complete logs of every entry and exit. Export reports for compliance audits. Search by user, time, or location. Never lose track of facility access history." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>" title="Remote Management" description="Grant or revoke access from anywhere. Lock or unlock doors remotely. Receive real-time alerts on your phone. Manage multiple locations from one dashboard." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>" title="Enterprise Integration" description="Connect with HR systems for automatic user provisioning. Integrate with alarms and other security systems. API available for custom workflows and applications." />
+    </div>
+  </Section>
+
+
+  <!-- Mid-Page CTA -->
+  <div class="text-center py-12 bg-slate-950/50 border-y border-slate-800">
+    <p class="text-slate-400 mb-4">Ready to see how Iron Gate can protect your operation?</p>
+    <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+  </div>
+
+  <!-- Technical Specifications -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Technical Specifications" 
+      subtitle="Enterprise-grade access management" 
+    />
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-slate-800">
+        <div class="divide-y divide-slate-800">
+          <div class="spec-row">
+            <span class="text-slate-400">Credential Types</span>
+            <span class="text-white font-medium">Proximity, Biometric, PIN, Mobile</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Max Doors per Controller</span>
+            <span class="text-white font-medium">Up to 64 Doors</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Communication Protocol</span>
+            <span class="text-white font-medium">TCP/IP, RS-485, Wiegand</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Management</span>
+            <span class="text-white font-medium">Cloud or On-Premise Options</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Operating Temperature</span>
+            <span class="text-white font-medium">-22°F to 150°F</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Power</span>
+            <span class="text-white font-medium">PoE / 12V DC with Battery Backup</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Weather Rating</span>
+            <span class="text-white font-medium">IP65 (Outdoor Readers)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Certifications</span>
+            <span class="text-white font-medium">UL 294, FCC, CE</span>
+          </div>
+        </div>
+      </div>
+      <p class="text-slate-400 text-sm text-center mt-6">
+Specifications vary by configuration. Contact us for detailed specs matching your facility requirements.
+</p>
+    </div>
+  </Section>
+
+  <!-- Our Hardware -->
+  <Section>
+    <SectionHeader 
+      title="Access Control Hardware" 
+      subtitle="Purpose-built readers and controllers" 
+    />
+    <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <img
+        src="/images/products/Access_Control_Black.webp"
+        srcset="/images/products/Access_Control_Black-640w.webp 640w, /images/products/Access_Control_Black.webp 1400w"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        alt="Iron Gate access control reader in black finish"
+        width="1400"
+        height="1050"
+        loading="lazy"
+        class="rounded-lg border border-slate-800"
+      />
+      <img
+        src="/images/products/Access_Control_Red.webp"
+        alt="Iron Gate access control reader in red finish"
+        width="1400"
+        height="1050"
+        loading="lazy"
+        class="rounded-lg border border-slate-800"
+      />
+    </div>
+  </Section>
+
+  <!-- Industries We Serve -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Industries We Serve" 
+      subtitle="Trusted by organizations that demand security" 
+    />
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800">
+        <div class="text-4xl mb-4 anim-float"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg></div>
+        <h3 class="text-xl font-semibold text-white mb-2">Commercial Buildings</h3>
+        <p class="text-slate-400 text-sm">
+Multi-tenant properties, office buildings, and corporate campuses
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800">
+        <div class="text-4xl mb-4 anim-float"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1M12 18h1M7 18h1"/></svg></div>
+        <h3 class="text-xl font-semibold text-white mb-2">Manufacturing</h3>
+        <p class="text-slate-400 text-sm">
+Secure production floors, warehouses, and restricted areas
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800">
+        <div class="text-4xl mb-4 anim-float"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v4"/><path d="M10 8h4"/><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M4 6h2M18 6h2"/><path d="M8 18h2M14 18h2"/><path d="M8 14h2M14 14h2"/></svg></div>
+        <h3 class="text-xl font-semibold text-white mb-2">Healthcare</h3>
+        <p class="text-slate-400 text-sm">
+HIPAA-compliant access for medical facilities and pharmacies
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800">
+        <div class="text-4xl mb-4 anim-float"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg></div>
+        <h3 class="text-xl font-semibold text-white mb-2">Education</h3>
+        <p class="text-slate-400 text-sm">
+Campus security, dormitories, and administrative buildings
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800">
+        <div class="text-4xl mb-4 anim-float"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/><line x1="2" y1="18" x2="22" y2="18"/></svg></div>
+        <h3 class="text-xl font-semibold text-white mb-2">Government</h3>
+        <p class="text-slate-400 text-sm">
+Municipal buildings, courthouses, and law enforcement facilities
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800">
+        <div class="text-4xl mb-4 anim-float"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg></div>
+        <h3 class="text-xl font-semibold text-white mb-2">Warehousing</h3>
+        <p class="text-slate-400 text-sm">
+Distribution centers, storage facilities, and loading docks
+</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Warranty -->
+  <div class="max-w-3xl mx-auto mt-8">
+    <div class="bg-slate-900/50 border border-slate-800 rounded-lg p-4 flex items-center justify-center gap-4">
+      <div class="text-2xl font-bold text-igt-cyan">3-Year Warranty</div>
+      <div class="text-slate-400 text-sm">on all access control components</div>
+    </div>
+    <p class="text-slate-400 text-sm text-center mt-4">If something does go wrong, our overnight RMA program ships a replacement unit the next business day. Every Iron Gate customer has access to our 24/7 dedicated support line. No call centers, no ticket queues.</p>
+  </div>
+
+
+  <!-- FAQ Section (GEO) -->
+  <Section class="bg-slate-950">
+    <SectionHeader title="Frequently Asked Questions" />
+    <div class="max-w-3xl mx-auto space-y-4">
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Can Iron Gate Access Control integrate with existing security cameras?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. Iron Gate's Access Control system integrates with our surveillance products and can work alongside existing camera infrastructure. Every entry event is logged with photo verification and a complete audit trail.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Does Access Control support both cloud and on-premise management?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. You can manage the system through cloud-based software or keep everything on-premise for organizations that require full data sovereignty. This flexibility sets Iron Gate apart from cloud-only competitors.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        How does Access Control scale from a single door to a full campus?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">The system is modular. Start with a single entry point and expand to an entire campus without replacing hardware. Each additional door integrates into the same management platform with centralized control.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        What types of credentials does the system support?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Iron Gate Access Control supports smart cards, mobile credentials, biometric readers, and PIN codes. You can combine multiple credential types for different access levels across your facility.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Will the access control system still work during an internet outage?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. Iron Gate Access Control units cache credentials and access rules locally. During an internet outage, readers continue to authenticate users and operate locks. Event logs sync to the cloud automatically once connectivity is restored. No entry is missed.</p>
+    </details>
+    </div>
+  </Section>
+  <!-- CTA -->
+  <section class="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-black">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+Take Control of Your Facility Access
+</h2>
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+From single doors to multi-site enterprises, we'll design a system that fits your security needs and budget.
+</p>
+        <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

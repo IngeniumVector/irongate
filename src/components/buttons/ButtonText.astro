@@ -1,0 +1,20 @@
+---
+interface Props {
+  href?: string;
+  text: string;
+  class?: string;
+}
+
+const { href, text, class: className = '' } = Astro.props;
+const Tag = href ? 'a' : 'button';
+---
+
+<Tag
+  href={href}
+  class={`inline-flex items-center text-igt-cyan font-medium hover:text-white transition-colors duration-200 ${className}`}
+>
+  {text}
+  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+  </svg>
+</Tag>

@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/layout/Hero.astro';
+import Section from '../components/layout/Section.astro';
+---
+
+<BaseLayout 
+  title="Privacy Policy" 
+  description="Iron Gate Technologies Privacy Policy: How we collect, use, and protect your information."
+>
+  <Hero 
+    variant="centered"
+    title="Privacy Policy"
+    description="Last Updated: February 6, 2026"
+  />
+
+  <Section>
+    <div class="max-w-4xl mx-auto prose prose-lg prose-invert">
+      <h2>Information We Collect</h2>
+      <p>
+        Iron Gate Technologies ("we," "our," or "us") collects information you provide directly to us when you request information, schedule consultations, or use our services.
+      </p>
+
+      <h2>How We Use Your Information</h2>
+      <p>
+        We use the information we collect to provide, maintain, and improve our services, to communicate with you about our products and services, and to respond to your inquiries.
+      </p>
+
+      <h2>Information Sharing</h2>
+      <p>
+        We do not sell, trade, or otherwise transfer your personally identifiable information to third parties. This does not include trusted third parties who assist us in operating our website or conducting our business, as long as those parties agree to keep this information confidential.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        We implement appropriate technical and organizational measures to protect the security of your personal information. However, please note that no method of transmission over the Internet or method of electronic storage is 100% secure.
+      </p>
+
+      <h2>Your Rights</h2>
+      <p>
+        You have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at ats@irongate.world.
+      </p>
+
+      <h2>Contact Us</h2>
+      <p>
+        If you have questions about this Privacy Policy, please contact us at:
+      </p>
+      <p>
+        ES Iron Gate Technologies LLC<br />
+        232 Carswell Ave<br />
+        Holly Hill, FL 32117<br />
+        Email: ats@irongate.world<br />
+        Phone: <a href="tel:+19048965618" class="text-slate-300 hover:text-igt-cyan transition-colors">904-896-5618</a>
+      </p>
+    </div>
+  </Section>
+</BaseLayout>

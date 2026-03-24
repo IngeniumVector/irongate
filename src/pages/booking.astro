@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Book a Call" 
+  description="Schedule a consultation with Iron Gate Technologies to discuss your security needs."
+>
+  <!-- Compact header: SEO h1 without the massive Hero component -->
+  <div class="bg-slate-950 pt-6 pb-4 text-center">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h1 class="text-2xl md:text-3xl font-bold text-white mb-1">Schedule Your Consultation</h1>
+      <p class="text-slate-400 text-sm">Choose a time that works for you.</p>
+    </div>
+  </div>
+
+  <!-- SuiteDash Booking Widget -->
+  <section class="pb-12 pt-2 bg-slate-950">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="bg-slate-900 border border-slate-800 rounded-lg p-2 md:p-4">
+        <div id="suitedash-form-container" class="w-full">
+          <!-- Spinner shown until SuiteDash loads -->
+          <div id="booking-loader" class="flex items-center justify-center py-12 text-slate-400" role="status">
+            <svg class="animate-spin h-6 w-6 mr-3 text-igt-cyan" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+            </svg>
+            <span class="text-sm">Loading scheduling form...</span>
+          </div>
+        </div>
+        <script is:inline src="https://app.suitedash.com/frm/24VvEW4J1ut2T9Tdc.js"></script>
+      </div>
+
+      <!-- Fallback if widget fails to load -->
+      <div id="booking-fallback" class="hidden text-center py-8">
+        <p class="text-white text-lg mb-4">Having trouble loading the form?</p>
+        <p class="text-slate-400 mb-6">Contact us directly to schedule your consultation.</p>
+        <a href="tel:+19048965618" class="text-igt-cyan text-xl font-semibold">904-896-5618</a>
+        <p class="text-slate-400 mt-2">or email <a href="mailto:ats@irongate.world" class="text-igt-cyan">ats@irongate.world</a></p>
+      </div>
+
+      <!-- What to Expect -->
+      <h2 class="text-2xl font-bold text-white text-center mt-12 mb-6">What to Expect</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="text-3xl mb-3" aria-hidden="true"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3 class="text-lg font-semibold text-white mb-2">Needs Assessment</h3>
+          <p class="text-slate-400 text-sm">
+            We'll discuss your specific security requirements and site conditions.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl mb-3" aria-hidden="true"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></div>
+          <h3 class="text-lg font-semibold text-white mb-2">Custom Solutions</h3>
+          <p class="text-slate-400 text-sm">
+            Our team will recommend tailored solutions based on your needs.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl mb-3" aria-hidden="true"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg></div>
+          <h3 class="text-lg font-semibold text-white mb-2">Detailed Proposal</h3>
+          <p class="text-slate-400 text-sm">
+            Receive a comprehensive quote with pricing and implementation timeline.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hide loader once SuiteDash renders content, show fallback after 8s if it doesn't -->
+  <script is:inline>
+    (function() {
+      var container = document.getElementById('suitedash-form-container');
+      var loader = document.getElementById('booking-loader');
+      var fallback = document.getElementById('booking-fallback');
+
+      function hideLoader() {
+        if (loader) loader.style.display = 'none';
+      }
+      function showFallback() {
+        if (fallback) fallback.classList.remove('hidden');
+      }
+
+      // Watch for SuiteDash to inject any element (especially iframe)
+      var observer = new MutationObserver(function(mutations) {
+        for (var i = 0; i < mutations.length; i++) {
+          var added = mutations[i].addedNodes;
+          for (var j = 0; j < added.length; j++) {
+            if (added[j].tagName === 'IFRAME' || added[j].nodeType === 1) {
+              hideLoader();
+              observer.disconnect();
+              return;
+            }
+          }
+        }
+      });
+
+      if (container) {
+        observer.observe(container, { childList: true, subtree: true });
+      }
+
+      // Poll for iframe as backup (every 500ms)
+      var checkInterval = setInterval(function() {
+        if (container) {
+          var iframe = container.querySelector('iframe');
+          var hasContent = container.children.length > 1;
+          if (iframe || hasContent) {
+            hideLoader();
+            clearInterval(checkInterval);
+          }
+        }
+      }, 500);
+
+      // Final timeout: always hide loader at 8s, show fallback only if no iframe
+      setTimeout(function() {
+        hideLoader();
+        clearInterval(checkInterval);
+        if (container && !container.querySelector('iframe')) {
+          showFallback();
+        }
+      }, 8000);
+    })();
+  </script>
+
+  <!-- Tame SuiteDash iframe whitespace if present -->
+  <style is:inline>
+    #suitedash-form-container iframe {
+      display: block;
+      margin-top: -8px;
+    }
+  </style>
+</BaseLayout>

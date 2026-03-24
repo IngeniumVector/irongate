@@ -1,0 +1,186 @@
+---
+import VerticalPage from '../../layouts/VerticalPage.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+---
+
+<!-- Industry Statistics Sources:
+  - National Equipment Register (NER) / National Insurance Crime Bureau (NICB): Construction equipment theft costs $300M-$1B annually in the US
+  - NER: Less than 25% of stolen construction equipment is ever recovered
+  - Associated General Contractors of America (AGC): 2023 survey reports 93% of contractors experienced material theft
+  - FBI: Construction site theft is the #1 property crime affecting the construction industry
+  - OSHA: Construction sites are required to maintain safe and secure environments under 29 CFR 1926
+  - National Association of Home Builders (NAHB): Material theft adds 1-5% to project costs
+  - Construction Financial Management Association (CFMA): Jobsite theft insurance claims average $30,000-$150,000
+-->
+
+<VerticalPage
+  title="Construction Site Security"
+  metaDescription="Solar-powered construction site security with AI surveillance. No power or internet required. Portable SecMods deploy in minutes and move with your project. Iron Gate Technologies."
+  heroHeadline="Jobsite Security That Moves with Your Project"
+  heroSubheadline="Construction Security"
+  heroDescription="Solar-powered, cellular-connected surveillance that deploys in minutes to any construction site. No external power, no internet hookup, no permanent installation. SecMods protect your equipment, materials, and liability from day one."
+  painPoints={[
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h9l1 7"/><path d="M4 11V4"/><circle cx="8" cy="18" r="3"/><circle cx="18" cy="17" r="4"/><path d="M14 17h-2"/><path d="M11 11h7l1 6"/></svg>",
+      title: "Equipment and Material Theft",
+      description: "Construction equipment theft costs the industry $300 million to $1 billion annually according to the National Equipment Register and NICB. Less than 25% of stolen equipment is ever recovered. The Associated General Contractors of America reports 93% of contractors experienced material theft in their 2023 survey."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M9 8V2M15 8V2"/><path d="M18 8v5a6 6 0 0 1-12 0V8Z"/></svg>",
+      title: "No Power, No Internet, No Infrastructure",
+      description: "New construction sites have no electrical grid, no internet service, and no existing infrastructure to support traditional security systems. Running temporary power and network connections for security adds cost, complexity, and project delays."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>",
+      title: "Liability and Incident Documentation",
+      description: "OSHA requires construction sites to maintain safe and secure environments under 29 CFR 1926. Without continuous surveillance, site managers lack documentation for insurance claims, OSHA investigations, and liability disputes. The average jobsite theft insurance claim ranges from $30,000 to $150,000."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>",
+      title: "Multi-Phase, Multi-Site Operations",
+      description: "Construction projects move through phases with changing perimeters, new buildings, and shifting activity zones. Contractors working multiple simultaneous sites need security that relocates without reinstallation costs or permanent infrastructure commitments."
+    }
+  ]}
+  solutions={[
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>",
+      title: "Solar-Powered SecMods",
+      description: "Completely self-contained surveillance units that run on solar power with 72-hour battery backup. No generators, no electrical hookups, no fuel costs. Deploy on day one before any site infrastructure exists."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>",
+      title: "Cellular Connectivity",
+      description: "4G/5G LTE connections provide real-time video feeds, alerts, and remote access without any internet infrastructure on site. Stream directly to your phone, office, or monitoring center from any jobsite location."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>",
+      title: "AI-Powered Detection",
+      description: "Automated monitoring detects after-hours intrusion, perimeter breaches, vehicle movement, and unauthorized access. Instant alerts to site managers and security teams without requiring overnight guard staffing."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>",
+      title: "30-Minute Deployment",
+      description: "SecMods arrive pre-configured and tested. Position the unit, power on, and you have professional-grade surveillance operational in under 30 minutes. No technician scheduling, no cable runs, no network configuration."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>",
+      title: "Portable Between Sites",
+      description: "When the project wraps, the security moves to the next site. No demolition of permanent installations, no abandoned infrastructure, no sunk costs. Your security investment follows your work, project after project."
+    },
+    {
+      icon: "<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>",
+      title: "Incident Documentation",
+      description: "Continuous 24/7 recording provides timestamped evidence for theft reports, insurance claims, OSHA investigations, and liability disputes. On-premise storage keeps footage under your direct control."
+    }
+  ]}
+  stats={[
+    { value: "$1B", label: "Annual Construction Theft" },
+    { value: "93%", label: "Contractors Hit by Theft" },
+    { value: "<30min", label: "Deployment Time" },
+    { value: "0", label: "External Power Required" }
+  ]}
+  differentiators={[
+    {
+      title: "Built for Sites with Nothing",
+      description: "Most security companies assume you have power and internet. Construction sites have neither. SecMods are designed from the ground up for zero-infrastructure environments with solar power, cellular connectivity, and self-contained operation."
+    },
+    {
+      title: "Moves with Your Project",
+      description: "Permanent camera installations make no sense for temporary construction sites. SecMods relocate from site to site, phase to phase. Your security investment works across your entire project pipeline, not just one location."
+    },
+    {
+      title: "No Subscription Costs",
+      description: "Enterprise surveillance vendors charge monthly per-camera fees that add up across multiple jobsites. Iron Gate provides professional-grade construction security at up to 25% less, with no recurring subscription or cloud storage fees."
+    },
+    {
+      title: "American-Made, Hurricane-Rated",
+      description: "Built in Holly Hill, Florida and rated IP67 for dust and water protection. Designed to withstand the same conditions your project faces: heat, rain, dust, wind, and the daily reality of active construction environments."
+    }
+  ]}
+  productLinks={[
+    {
+      name: "SecMods",
+      description: "Solar-powered portable surveillance with AI detection, cellular connectivity, and 30-minute deployment. The core solution for construction site security.",
+      href: "/solutions/secmods/"
+    },
+    {
+      name: "RaptorNet",
+      description: "Extend connectivity across large jobsites to support multiple camera positions, access points, and monitoring stations.",
+      href: "/solutions/network-infrastructure/"
+    }
+  ]}
+  warrantyTiers={[
+    { years: "7 Years", label: "Camera Systems" },
+    { years: "5 Years", label: "SecMod Units" },
+    { years: "3 Years", label: "All Other Systems" }
+  ]}
+  ctaHeadline="Protect Your Jobsite Starting Tomorrow"
+  ctaDescription="Our team will configure a SecMod deployment plan for your current projects. Solar-powered, cellular-connected, ready to deploy."
+>
+  <!-- Construction-Specific Section -->
+  <Section>
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader
+        title="Security for Every Project Phase"
+        subtitle="From groundbreaking to punch list"
+      />
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6 text-center">
+          <div class="text-4xl mb-4"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><rect x="9" y="12" width="6" height="8"/><path d="M3 20h2M19 20h2"/></svg></div>
+          <h3 class="text-lg font-semibold text-white mb-3">Early Phase</h3>
+          <p class="text-slate-400 text-sm">Bare ground, no infrastructure, high-value equipment arriving daily. SecMods deploy immediately with solar power and cellular connectivity. Protect equipment and materials from day one.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6 text-center">
+          <div class="text-4xl mb-4"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h3 class="text-lg font-semibold text-white mb-3">Active Construction</h3>
+          <p class="text-slate-400 text-sm">Shift changes, subcontractor access, material deliveries, and expanding work zones. Relocate units as the site footprint changes. Monitor multiple access points and staging areas simultaneously.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-lg p-6 text-center">
+          <div class="text-4xl mb-4"><svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></svg></div>
+          <h3 class="text-lg font-semibold text-white mb-3">Closeout and Handoff</h3>
+          <p class="text-slate-400 text-sm">Finished interiors, installed fixtures, and high-value finishes are prime targets before occupancy. Maintain surveillance through punch list and turnover, then move the units to your next project.</p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Fragment slot="head">
+    <!-- Dataset: NER/NICB Construction Equipment Theft Statistics -->
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "National Equipment Register Construction Theft Statistics",
+  "description": "Annual construction equipment theft cost estimates in the United States",
+  "citation": "National Equipment Register (NER) and National Insurance Crime Bureau (NICB)",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "https://irongate.world/solutions/construction/",
+    "encodingFormat": "text/html"
+  },
+  "temporalCoverage": "2023",
+  "variableMeasured": "Annual construction equipment theft cost",
+  "measurementTechnique": "Insurance claims analysis and law enforcement reporting"
+}
+    </script>
+    <!-- Dataset: AGC Contractor Theft Survey -->
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "AGC 2023 Contractor Theft Survey",
+  "description": "Percentage of contractors reporting material theft on job sites",
+  "citation": "Associated General Contractors of America (AGC) 2023 Survey",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "https://irongate.world/solutions/construction/",
+    "encodingFormat": "text/html"
+  },
+  "temporalCoverage": "2023",
+  "variableMeasured": "Contractor material theft incidence rate",
+  "measurementTechnique": "Industry survey of AGC member contractors"
+}
+    </script>
+  </Fragment>
+</VerticalPage>

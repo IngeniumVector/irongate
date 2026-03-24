@@ -1,0 +1,373 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/layout/Section.astro';
+import SectionHeader from '../../components/layout/SectionHeader.astro';
+import FeatureCard from '../../components/cards/FeatureCard.astro';
+import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
+---
+
+<BaseLayout 
+  title="Falcon Strike Tactical Aerial Surveillance" 
+  description="Helicopter-mounted tactical surveillance for UH-60 Blackhawk platforms. PTZ cameras with X640 digital zoom, FLIR thermal imaging, AI object detection, and satellite communications. Five-minute installation."
+>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" is:inline>
+
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://irongate.world/solutions/falcon-strike/#product",
+  "name": "ES Iron Gate Technologies Falcon Strike",
+  "description": "Helicopter-mounted tactical surveillance system for search and rescue, disaster reconnaissance, and border security. Installs on UH-60 Blackhawk platforms in five minutes with no permanent airframe modifications.",
+  "brand": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "manufacturer": {
+    "@id": "https://irongate.world/#organization"
+  },
+  "category": "Tactical Aerial Surveillance Systems",
+  "image": [
+    "https://irongate.world/images/products/Falcon_Strike_Deployed.webp",
+    "https://irongate.world/images/products/Falcon_Strike_Cameras.webp"
+  ],
+  "url": "https://irongate.world/solutions/falcon-strike/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Platform",
+      "value": "UH-60 Blackhawk (drop-in cargo area installation)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Camera",
+      "value": "PTZ X40 optical / X640 digital zoom (ONVIF)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Thermal",
+      "value": "FLIR Forward-Looking Infrared"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Communications",
+      "value": "T-Mobile LTE + satellite failover"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Setup Time",
+      "value": "Under 5 minutes"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Manufacturing",
+      "value": "Made in USA (Holly Hill, FL)"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "priceCurrency": "USD",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "USD",
+      "valueAddedTaxIncluded": false
+    },
+    "warranty": {
+      "@type": "WarrantyPromise",
+      "durationOfWarranty": {
+        "@type": "QuantitativeValue",
+        "value": 3,
+        "unitCode": "ANN"
+      },
+      "warrantyScope": "Falcon Strike Systems"
+    },
+    "seller": {
+      "@id": "https://irongate.world/#organization"
+    }
+  }
+}
+
+  </script>
+    <!-- FAQPage Schema (GEO) -->
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What aircraft is Falcon Strike compatible with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Falcon Strike is designed for drop-in installation on UH-60 Blackhawk platforms. The system installs in five minutes with no permanent airframe modifications required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What missions is Falcon Strike designed for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Falcon Strike supports search and rescue, disaster reconnaissance, border security, and crowd monitoring operations. The multi-spectrum camera array provides tactical surveillance across visible, infrared, and thermal bands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can Falcon Strike be installed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five minutes. Falcon Strike uses a drop-in installation system that requires no permanent modifications to the airframe. The crew can mount, connect, and begin operations in a single preparation cycle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Falcon Strike available for civilian or law enforcement use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. While designed for military platforms, Falcon Strike is available for federal, state, and local law enforcement agencies as well as government civilian agencies conducting aerial surveillance operations."
+      }
+    }
+  ]
+}
+    </script>
+
+  <!-- Hero with Background Image -->
+  <section class="relative min-h-[60vh] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="/images/products/Falcon_Strike_Deployed.webp"
+        srcset="/images/products/Falcon_Strike_Deployed-640w.webp 640w, /images/products/Falcon_Strike_Deployed-1024w.webp 1024w, /images/products/Falcon_Strike_Deployed.webp 1400w"
+        sizes="100vw"
+        alt="Falcon Strike tactical aerial surveillance system deployed on helicopter"
+        width="1400"
+        height="1050"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10 py-24">
+      <div class="max-w-3xl bg-black/75 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+        <p class="text-igt-cyan font-semibold mb-4 tracking-wide uppercase text-sm">Tactical Aerial Surveillance</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Falcon Strike</h1>
+        <p class="text-xl text-slate-300 mb-8 max-w-2xl">Helicopter-mounted tactical surveillance for search and rescue, disaster reconnaissance, border security, and crowd monitoring. Drop-in installation on UH-60 Blackhawk platforms with five-minute setup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Answer-First Paragraph (GEO) -->
+  <section class="bg-slate-950 pt-12 pb-0">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <p class="text-lg text-slate-300 max-w-3xl mx-auto text-center mb-12">Iron Gate Falcon Strike is a helicopter-mounted tactical surveillance system for search and rescue, disaster reconnaissance, and border security. It installs on UH-60 Blackhawk platforms in five minutes with no permanent airframe modifications. Manufactured in Holly Hill, Florida.</p>
+    </div>
+  </section>
+
+  <!-- Challenge / Solution -->
+  <Section class="bg-slate-950">
+    <div class="max-w-4xl mx-auto">
+      <SectionHeader 
+        title="The Challenge" 
+        subtitle="Aerial surveillance demands more than small aircraft can deliver" 
+      />
+      <p class="text-slate-400 text-lg text-center mb-12">
+Disaster zones, border regions, and large-scale events require persistent aerial surveillance that covers vast areas in real time. Consumer and commercial unmanned aircraft have limited flight time, restricted payload capacity, and regulatory constraints that make them impractical for extended tactical operations. Manned aircraft offer the endurance and payload capacity, but lack integrated intelligent surveillance systems purpose-built for the mission.
+</p>
+      <SectionHeader 
+        title="The Solution" 
+        subtitle="Military-grade surveillance meets rapid helicopter deployment" 
+      />
+      <p class="text-slate-400 text-lg text-center">
+Falcon Strike transforms any UH-60 Blackhawk into a fully equipped aerial surveillance platform in under five minutes. The complete system installs as a drop-in package in the cargo area, requiring no permanent aircraft modification. With PTZ cameras delivering X40 optical to X640 digital zoom, FLIR thermal imaging, AI-powered object detection, and redundant communications through satellite and T-Mobile LTE failover, Falcon Strike provides the same intelligence capability as dedicated surveillance aircraft at a fraction of the cost.
+</p>
+    </div>
+  </Section>
+
+  <!-- Capabilities -->
+  <Section>
+    <SectionHeader 
+      title="Capabilities" 
+      subtitle="Complete tactical surveillance in a single drop-in package" 
+    />
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>" title="X640 Digital Zoom" description="PTZ camera system with X40 optical zoom extending to X640 digital. ONVIF-compliant for integration with any video management system. Identify targets from operational altitude with clarity." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg>" title="FLIR Thermal Imaging" description="Forward-looking infrared camera for night operations, search and rescue in low visibility, and detecting heat signatures through smoke, fog, and darkness." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>" title="AI Object Detection" description="Real-time classification of vehicles, persons, and objects. Automated tracking and alert generation. AI processing runs locally on the onboard Panasonic Toughbook server." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>" title="Redundant Communications" description="Mini router with T-Mobile LTE primary and satellite failover. High-gain cellular antenna ensures connectivity even in remote operational areas. Live HD streaming to ground command." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>" title="Five-Minute Installation" description="Complete system drops into the UH-60 cargo area with no permanent modification to the aircraft. Pre-configured and tested. Arrive, install, and fly." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>" title="LRAD Acoustic Deterrence" description="Optional Long Range Acoustic Device for crowd communication and area denial. Deliver clear voice commands or deterrent tones from operational altitude." />
+    </div>
+  </Section>
+
+
+  <!-- Mid-Page CTA -->
+  <div class="text-center py-12 bg-slate-950/50 border-y border-slate-800">
+    <p class="text-slate-400 mb-4">Ready to see how Iron Gate can protect your operation?</p>
+    <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+  </div>
+
+  <!-- Technical Specifications -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Technical Specifications" 
+      subtitle="Purpose-built for tactical aerial operations" 
+    />
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-slate-900/50 rounded-lg overflow-hidden border border-slate-800">
+        <div class="divide-y divide-slate-800">
+          <div class="spec-row">
+            <span class="text-slate-400">Camera System</span>
+            <span class="text-white font-medium">PTZ with X40 Optical / X640 Digital Zoom (ONVIF)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Thermal</span>
+            <span class="text-white font-medium">FLIR Forward-Looking Infrared</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Computing</span>
+            <span class="text-white font-medium">Panasonic Toughbook (server, storage, streaming)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Primary Comms</span>
+            <span class="text-white font-medium">T-Mobile 4G LTE with High-Gain Antenna</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Backup Comms</span>
+            <span class="text-white font-medium">Satellite (automatic failover)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Platform</span>
+            <span class="text-white font-medium">UH-60 Blackhawk (cargo area drop-in)</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Setup Time</span>
+            <span class="text-white font-medium">Under 5 Minutes</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Optional</span>
+            <span class="text-white font-medium">VR Headset Interface, LRAD Acoustic Device</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">AI Processing</span>
+            <span class="text-white font-medium">Real-time Object Detection and Classification</span>
+          </div>
+          <div class="spec-row">
+            <span class="text-slate-400">Manufacturing</span>
+            <span class="text-white font-medium">Made in USA (Holly Hill, FL)</span>
+          </div>
+        </div>
+      </div>
+      <p class="text-slate-400 text-sm text-center mt-6">
+Specifications vary by mission configuration. Contact us for detailed specs matching your operational requirements.
+</p>
+    </div>
+  </Section>
+
+  <!-- Mission Profiles -->
+  <Section>
+    <SectionHeader 
+      title="Mission Profiles" 
+      subtitle="Designed for the missions that matter most" 
+    />
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Search and Rescue</h3>
+        <p class="text-slate-400">
+Locate missing persons with thermal imaging in any conditions. AI-assisted scanning covers more ground faster than visual search alone. Stream live feeds to ground coordination teams.
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Border Security</h3>
+        <p class="text-slate-400">
+Persistent wide-area surveillance with automatic detection of movement and vehicles. High-zoom identification from safe operational altitude. Coordinate with ground units in real time.
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Disaster Reconnaissance</h3>
+        <p class="text-slate-400">
+Assess damage, locate survivors, and map affected areas after hurricanes, floods, or wildfires. Thermal imaging penetrates smoke and debris. Satellite connectivity ensures communications when cell towers are down.
+</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-8 border border-slate-800">
+        <h3 class="text-2xl font-semibold text-white mb-4">Crowd Monitoring</h3>
+        <p class="text-slate-400">
+Large-scale event security with AI-powered crowd analysis. Identify emerging situations before they escalate. Optional LRAD provides direct communication to crowds from the air.
+</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Gallery -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Falcon Strike in the Field" 
+      subtitle="Purpose-built for tactical aerial operations" 
+    />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+      <img
+        src="/images/products/Falcon_Strike_Deployed.webp"
+        srcset="/images/products/Falcon_Strike_Deployed-640w.webp 640w, /images/products/Falcon_Strike_Deployed.webp 1400w"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        alt="Falcon Strike system deployed on UH-60 Blackhawk helicopter"
+        width="1400" height="1050"
+        loading="lazy"
+        class="rounded-lg border border-slate-800"
+      />
+      <img
+        src="/images/products/Falcon_Strike_Cameras.webp"
+        srcset="/images/products/Falcon_Strike_Cameras-640w.webp 640w, /images/products/Falcon_Strike_Cameras-1024w.webp 1024w, /images/products/Falcon_Strike_Cameras.webp 1400w"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        alt="Falcon Strike camera array with PTZ and thermal imaging systems"
+        width="1400" height="1050"
+        loading="lazy"
+        class="rounded-lg border border-slate-800"
+      />
+    </div>
+  </Section>
+
+
+  <!-- FAQ Section (GEO) -->
+  <Section class="bg-slate-950">
+    <SectionHeader title="Frequently Asked Questions" />
+    <div class="max-w-3xl mx-auto space-y-4">
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        What aircraft is Falcon Strike compatible with?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Falcon Strike is designed for drop-in installation on UH-60 Blackhawk platforms. The system installs in five minutes with no permanent airframe modifications required.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        What missions is Falcon Strike designed for?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Falcon Strike supports search and rescue, disaster reconnaissance, border security, and crowd monitoring operations. The multi-spectrum camera array provides tactical surveillance across visible, infrared, and thermal bands.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        How quickly can Falcon Strike be installed?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Five minutes. Falcon Strike uses a drop-in installation system that requires no permanent modifications to the airframe. The crew can mount, connect, and begin operations in a single preparation cycle.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Is Falcon Strike available for civilian or law enforcement use?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. While designed for military platforms, Falcon Strike is available for federal, state, and local law enforcement agencies as well as government civilian agencies conducting aerial surveillance operations.</p>
+    </details>
+    </div>
+  </Section>
+  <!-- CTA -->
+  <Section>
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+Ready to Deploy Falcon Strike?
+</h2>
+      <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+Discuss your operational requirements with our team. We will configure Falcon Strike for your specific mission profile.
+</p>
+      <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+    </div>
+  </Section>
+
+</BaseLayout>

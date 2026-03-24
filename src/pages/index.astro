@@ -1,0 +1,296 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/layout/Hero.astro';
+import Section from '../components/layout/Section.astro';
+import SectionHeader from '../components/layout/SectionHeader.astro';
+import ButtonPrimary from '../components/buttons/ButtonPrimary.astro';
+import ButtonSecondary from '../components/buttons/ButtonSecondary.astro';
+import ProductCard from '../components/cards/ProductCard.astro';
+import FeatureCard from '../components/cards/FeatureCard.astro';
+import IndustryCard from '../components/cards/IndustryCard.astro';
+import LogoGrid from '../components/LogoGrid.astro';
+---
+
+<BaseLayout 
+  title="Home" 
+  description="AI-powered surveillance systems built in Florida. Solar-powered, cellular-connected security that deploys in minutes. Book a free assessment today."
+>
+  <!-- Hero Section -->
+  <Hero 
+    variant="homepage-bg"
+    badge="Systems Active"
+    title="AI-Powered Surveillance. American Made."
+    subtitle='In God We Trust. All Others We Track.<span class="text-base align-super">™</span>'
+    description="Portable security systems that deploy in minutes, not days. Solar-powered. Cellular-connected. Built in Florida."
+    image="/images/homepage/hero-camera.webp"
+    imageAlt="Iron Gate Technologies AI-powered surveillance system"
+  >
+    <div slot="cta" class="flex flex-col sm:flex-row gap-4 justify-center">
+      <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+      <ButtonSecondary href="/solutions" text="Explore Solutions" />
+    </div>
+  </Hero>
+
+  <!-- Stats Bar -->
+  <section class="bg-slate-950 border-y border-slate-800 py-12">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center cursor-default">
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-igt-cyan mb-2" aria-label="11 Security Patents">11</div>
+          <div class="text-slate-400 text-sm md:text-base">Security Patents</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-igt-cyan mb-2" aria-label="24/7 AI Monitoring">24/7</div>
+          <div class="text-slate-400 text-sm md:text-base">AI Monitoring</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-igt-cyan mb-2" aria-label="100% American Made">100%</div>
+          <div class="text-slate-400 text-sm md:text-base">American Made</div>
+        </div>
+        <div>
+          <div class="text-3xl md:text-4xl font-bold text-igt-cyan mb-2" aria-label="Under 5 seconds threat detection">&lt;5s</div>
+          <div class="text-slate-400 text-sm md:text-base">Threat Detection</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Iron Gate -->
+  <Section>
+    <SectionHeader 
+      title="Why Iron Gate" 
+      subtitle="Built for mission-critical security operations with American craftsmanship"
+    />
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <FeatureCard 
+        icon='<img src="/icons/us-flag.svg" alt="American Flag" width="48" height="32" class="inline-block" />'
+        title="American Made"
+        description="All systems manufactured in-house at our Holly Hill, Florida facility. Complete control over quality, customization, and delivery timelines."
+      />
+      <FeatureCard 
+        icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><circle cx="11" cy="11" r="3"/></svg>"
+        title="AI-Powered Detection"
+        description="Advanced threat detection with gun identification in under 5 seconds. Real-time alerts keep your team informed instantly."
+      />
+      <FeatureCard 
+        icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>"
+        title="Rapid Deployment"
+        description="Solar-powered systems that deploy in minutes with no infrastructure required. Cellular connectivity means security anywhere."
+      />
+    </div>
+
+    <!-- Warranty Trust Signal -->
+    <div class="mt-12 bg-slate-950/50 border border-slate-800 rounded-xl p-8">
+      <h3 class="text-xl font-bold text-white text-center mb-6">Industry-Leading Warranty Protection</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div class="p-4">
+          <div class="text-3xl font-bold text-igt-cyan mb-1">7 Years</div>
+          <div class="text-slate-300 text-sm font-medium">Camera Systems</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl font-bold text-igt-cyan mb-1">5 Years</div>
+          <div class="text-slate-300 text-sm font-medium">SecMod Units</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl font-bold text-igt-cyan mb-1">3 Years</div>
+          <div class="text-slate-300 text-sm font-medium">All Other Systems</div>
+        </div>
+      </div>
+      <p class="text-slate-400 text-xs text-center mt-4">Built to last. Backed by warranties that prove it.</p>
+    </div>
+  </Section>
+
+  <!-- Industries We Serve -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="Industries We Serve" 
+      subtitle="Comprehensive security solutions for every environment"
+    />
+    
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><rect x="9" y="12" width="6" height="8"/><path d="M3 20h2M19 20h2"/></svg>" name="Construction" href="/solutions/construction/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="22"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>" name="Marine and Marinas" href="/solutions/marine/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22V8l-6-6-6 6v14"/><path d="M2 22h20"/><path d="M10 22v-4a2 2 0 1 1 4 0v4"/><path d="M12 2v4"/><path d="M9 4h6"/></svg>" name="Houses of Worship" href="/solutions/churches/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>" name="Schools and Education" href="/solutions/schools/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v4"/><path d="M10 8h4"/><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M4 6h2M18 6h2"/><path d="M8 18h2M14 18h2"/><path d="M8 14h2M14 14h2"/></svg>" name="Healthcare" href="/solutions/healthcare/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/><line x1="2" y1="18" x2="22" y2="18"/></svg>" name="Government" href="/solutions/government/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h1"/><path d="M15 18h2l3-3V8h-5"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>" name="Logistics and Warehousing" href="/solutions/logistics/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/></svg>" name="Commercial Properties" href="/solutions/commercial/" />
+      <IndustryCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1M12 18h1M7 18h1"/></svg>" name="Industrial" href="/solutions/industrial/" />
+    </div>
+  </Section>
+
+  <!-- Our Solutions -->
+  <Section>
+    <SectionHeader 
+      title="Our Solutions" 
+      subtitle="Advanced security technology designed and built in America"
+    />
+    
+    <!-- Row 1: 4 products -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <ProductCard 
+        title="SecMods"
+        description="Portable AI-powered surveillance trailers for construction sites, events, and temporary deployments. Solar-powered with cellular connectivity."
+        image="/images/products/secmod-logo.webp"
+        srcset="/images/products/secmod-logo-640w.webp 640w, /images/products/secmod-logo.webp 1536w"
+        imageAlt="SecMods portable surveillance system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/secmods/"
+      />
+      <ProductCard 
+        title="YachtGuard"
+        description="Marine-grade security systems designed specifically for boats and yachts. Suction-cup mounting and weather-resistant construction."
+        image="/images/products/yachtguard-logo.webp"
+        srcset="/images/products/yachtguard-logo-640w.webp 640w, /images/products/yachtguard-logo.webp 1536w"
+        imageAlt="YachtGuard marine security system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/yachtguard/"
+      />
+      <ProductCard 
+        title="Access Control"
+        description="Enterprise-grade entry management with biometrics, mobile credentials, and cloud or on-premise management options."
+        image="/images/products/access-control-logo.webp"
+        srcset="/images/products/access-control-logo-640w.webp 640w, /images/products/access-control-logo.webp 1536w"
+        imageAlt="Access Control entry management system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/access-control/"
+      />
+      <ProductCard 
+        title="Falcon Strike"
+        description="Helicopter-mounted tactical surveillance for search and rescue, disaster recon, and border security. Five-minute Blackhawk installation."
+        image="/images/products/falcon-strike-logo.webp"
+        srcset="/images/products/falcon-strike-logo-640w.webp 640w, /images/products/falcon-strike-logo.webp 1536w"
+        imageAlt="Falcon Strike aerial surveillance system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/falcon-strike/"
+      />
+    </div>
+    
+    <!-- Row 2: 4 products -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+      <ProductCard 
+        title="FreightGuard"
+        description="Intelligent security for warehouses, distribution centers, and freight yards. License plate recognition and vehicle tracking."
+        image="/images/products/freightguard-logo.webp"
+        srcset="/images/products/freightguard-logo-640w.webp 640w, /images/products/freightguard-logo.webp 1536w"
+        imageAlt="FreightGuard logistics security system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/freightguard/"
+      />
+      <ProductCard 
+        title="Autonomous Robots"
+        description="Self-navigating patrol units that provide mobile surveillance and WiFi coverage. Solar-powered and completely autonomous."
+        image="/images/products/autonomous-robot-logo.webp"
+        srcset="/images/products/autonomous-robot-logo-640w.webp 640w, /images/products/autonomous-robot-logo.webp 1536w"
+        imageAlt="Autonomous patrol robot logo"
+        width={1536}
+        height={1024}
+        href="/solutions/autonomous-robots/"
+      />
+      <ProductCard 
+        title="RaptorNet"
+        description="Industrial-grade WiFi and connectivity solutions that power your security infrastructure in any environment."
+        image="/images/products/raptornet-logo.webp"
+        srcset="/images/products/raptornet-logo-640w.webp 640w, /images/products/raptornet-logo.webp 1536w"
+        imageAlt="RaptorNet network infrastructure logo"
+        width={1536}
+        height={1024}
+        href="/solutions/network-infrastructure/"
+      />
+      <ProductCard 
+        title="Hunting Solution"
+        description="AI-powered security for hunting properties, rural land, and wildlife management areas. Cellular-connected surveillance designed for remote locations."
+        image="/images/products/hunting-solution-logo.webp"
+        imageAlt="Hunting Solution rural security system logo"
+        width={1536}
+        height={1024}
+        href="/solutions/hunting-solution/"
+      />
+    </div>
+  </Section>
+
+  <!-- Video Section -->
+  <Section class="bg-slate-950">
+    <SectionHeader 
+      title="See Our Technology in Action" 
+    />
+    
+    <div class="max-w-4xl mx-auto">
+      <div class="aspect-video bg-slate-900 rounded-lg overflow-hidden shadow-2xl shadow-igt-cyan/20">
+        <iframe 
+          width="100%" 
+          height="100%" 
+          src="https://www.youtube.com/embed/B3oSn6_oYAA" 
+          title="Iron Gate Technologies Overview" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+          class="w-full h-full"
+        ></iframe>
+      </div>
+    </div>
+  </Section>
+
+  <!-- What Our Clients Say -->
+  <Section>
+    <SectionHeader 
+      title="What Our Clients Say" 
+      subtitle="Real results from organizations that trust Iron Gate"
+    />
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-slate-900 border border-slate-800 rounded-lg p-8 relative">
+        <div class="text-igt-cyan text-4xl font-serif mb-4">&ldquo;</div>
+        <p class="text-slate-300 text-sm leading-relaxed">I didn't want to install a permanent security system that would damage the hull of our new charter fleet. YachtGuard's suction cup mounting was the perfect solution, no drilling, no damage. Todd showed us how the marine-grade, salt-resistant housing holds up to the harshest spray. I can check the live 4K feed from my phone anywhere in the world while the boat is at anchor.</p>
+        <div class="mt-6 pt-4 border-t border-slate-800">
+          <p class="text-white font-semibold">Julian</p>
+        </div>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 rounded-lg p-8 relative">
+        <div class="text-igt-cyan text-4xl font-serif mb-4">&ldquo;</div>
+        <p class="text-slate-300 text-sm leading-relaxed">Upgrading our campus from physical keys to Iron Gate's Access Control changed everything. Every entry now has an audit trail with photo verification. Their team also overhauled our Network Infrastructure, installing weather-resistant WiFi 6 access points that cover 1,200 feet. They kept our locks and cameras online without a second of downtime.</p>
+        <div class="mt-6 pt-4 border-t border-slate-800">
+          <p class="text-white font-semibold">Elena</p>
+        </div>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 rounded-lg p-8 relative">
+        <div class="text-igt-cyan text-4xl font-serif mb-4">&ldquo;</div>
+        <p class="text-slate-300 text-sm leading-relaxed">We were constructing a luxury apartment complex, but couldn't get high quality security employees. Rusty and Corey solved this problem with Iron Gate's SecMods: self-contained, solar-powered units that were fully operational in 30 minutes. These units stop most vandalism and when they don't, we get AI-powered 4K detection for real-time alerts. It has an IP67 hurricane rating and 72-hour battery backup so the perimeter will be secure no matter what.</p>
+        <div class="mt-6 pt-4 border-t border-slate-800">
+          <p class="text-white font-semibold">Phil</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <p class="text-slate-400 mb-6">Ready to see what we can do for you?</p>
+      <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+    </div>
+  </Section>
+
+  <!-- Organizations We Protect - Logo Grid -->
+  <LogoGrid />
+
+  <!-- Final CTA -->
+  <Section>
+    <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-12 md:p-16 text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+        Ready to Secure Your Property?
+      </h2>
+      <p class="text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+        Talk to our team about customized security solutions built specifically for your needs.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+        <ButtonSecondary href="/contact" text="Contact Us" />
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

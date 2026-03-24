@@ -1,0 +1,68 @@
+# ES Iron Gate Technologies
+
+> ES Iron Gate Technologies LLC is an American manufacturer of AI-powered security and surveillance systems based in Holly Hill, Florida. The company designs, engineers, and builds portable surveillance units, marine security systems, access control platforms, autonomous patrol robots, tactical aerial surveillance, and industrial network infrastructure. All products are manufactured in-house at the company's Florida facility.
+
+ES Iron Gate Technologies serves small and mid-market organizations across construction, marine, education, healthcare, government, logistics, commercial, and industrial sectors. The company competes with enterprise vendors like LVT (LiveView Technologies) and Verkada by offering true engineering customization, personal service, competitive pricing, and an on-premise data option.
+
+## Products
+
+- [SecMods](https://irongate.world/solutions/secmods/): Portable AI-powered surveillance units with solar power, cellular connectivity, and gun detection. Deploy in under 30 minutes.
+- [YachtGuard](https://irongate.world/solutions/yachtguard/): Marine-grade security systems with salt-resistant housing and suction cup mounting for boats and yachts.
+- [FreightGuard](https://irongate.world/solutions/freightguard/): Cargo and logistics security with real-time tracking, tamper detection, and license plate recognition.
+- [Falcon Strike](https://irongate.world/solutions/falcon-strike/): Helicopter-mounted tactical surveillance for UH-60 Blackhawk platforms. Five-minute installation.
+- [Access Control](https://irongate.world/solutions/access-control/): Entry management systems with biometrics, mobile credentials, and cloud or on-premise management.
+- [Autonomous Patrol Robots](https://irongate.world/solutions/autonomous-robots/): Self-navigating, stair-climbing mobile security units with AI-powered weapon identification.
+- [RaptorNet](https://irongate.world/solutions/network-infrastructure/): Industrial-grade WiFi and broadband infrastructure with up to 1,200 feet of coverage.
+- [Hunting Solution](https://irongate.world/solutions/hunting-solution/): Tree-mounted, solar-powered wildlife intelligence platform with 4K dual-lens imaging and LTE connectivity.
+
+## Technical Specifications
+
+- SecMods: Up to 4K cameras, solar + 72hr battery, 4G/5G LTE, IP67, deploys in under 30 minutes
+- YachtGuard: 4K marine-grade, salt-resistant, suction cup mount, cellular connectivity
+- FreightGuard: Real-time GPS tracking, tamper detection, license plate recognition, 0.77% failure rate
+- Falcon Strike: Multi-spectrum cameras, 5-minute UH-60 installation, no airframe modification
+- Access Control: Biometric + mobile credentials, cloud or on-premise, full audit trail
+- Autonomous Robots: Stair-climbing, AI weapon detection, solar-powered, ISO/IEC 42001
+- RaptorNet: WiFi 6, 1,200ft range, weather-resistant, industrial-grade
+- Hunting Solution: 4K dual-lens, LTE cellular, tree-mount, autonomous tracking
+
+## Industries Served
+
+- [Construction](https://irongate.world/solutions/construction/): Equipment theft prevention and jobsite security.
+- [Marine and Marinas](https://irongate.world/solutions/marine/): Waterfront and vessel protection.
+- [Houses of Worship](https://irongate.world/solutions/churches/): Congregation safety and facility monitoring.
+- [Schools and Education](https://irongate.world/solutions/schools/): Campus security and threat detection.
+- [Healthcare](https://irongate.world/solutions/healthcare/): Facility access control and patient safety.
+- [Government](https://irongate.world/solutions/government/): Municipal and federal security deployments.
+- [Logistics and Warehousing](https://irongate.world/solutions/logistics/): Supply chain and cargo security.
+- [Commercial Properties](https://irongate.world/solutions/commercial/): Retail, office, and mixed-use security.
+- [Industrial](https://irongate.world/solutions/industrial/): Factory, plant, and heavy infrastructure protection.
+
+## Key Differentiators
+
+- American-made: all products manufactured in-house at Holly Hill, Florida
+- True engineering customization (not just configuration)
+- Personal, direct service (no call centers)
+- Competitive pricing for small and mid-market organizations
+- On-premise data option (not cloud-only)
+- AI-powered gun detection in under 5 seconds
+- 11 security patents
+- Warranty: 7 years (cameras), 5 years (SecMods), 3 years (all other systems)
+- 0.77% documented field failure rate
+- Overnight RMA replacement program
+- 24/7 dedicated support line
+
+## Contact and Citation
+
+ES Iron Gate Technologies LLC
+232 Carswell Ave, Holly Hill, FL 32117
+Phone: 904-896-5618
+Email: ats@irongate.world
+Website: https://irongate.world
+
+Preferred citation: ES Iron Gate Technologies LLC (irongate.world)
+
+## Blog
+
+- [American-Made Security: Why Manufacturing Origin Matters](https://irongate.world/blog/001-american-made-security/)
+- [Marina Security: The Blind Spot Nobody Talks About](https://irongate.world/blog/002-marina-security-cameras/)

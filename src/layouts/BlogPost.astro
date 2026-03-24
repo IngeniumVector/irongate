@@ -1,0 +1,94 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import ButtonPrimary from '../components/buttons/ButtonPrimary.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  category: string;
+  publishDate: string;
+  readTime: string;
+  author?: string;
+  ogImage?: string;
+  schemaType?: 'BlogPosting' | 'TechArticle';
+}
+
+const {
+  title,
+  description,
+  slug,
+  category,
+  publishDate,
+  readTime,
+  author = 'Iron Gate Technologies',
+  ogImage = '/images/homepage/hero-camera.webp',
+  schemaType = 'BlogPosting',
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": schemaType,
+      "headline": title,
+      "description": description,
+      "author": {
+        "@id": "https://irongate.world/#organization"
+      },
+      "publisher": {
+        "@id": "https://irongate.world/#organization"
+      },
+      "datePublished": publishDate,
+      "dateModified": publishDate,
+      "image": `https://irongate.world${ogImage}`,
+      "url": `https://irongate.world/blog/${slug}/`,
+      "mainEntityOfPage": `https://irongate.world/blog/${slug}/`
+    })} />
+  </Fragment>
+
+  <article class="blog-post">
+    <!-- Post Header -->
+    <div class="bg-gradient-to-br from-slate-950 to-slate-900 py-20 md:py-28">
+      <div class="container mx-auto px-4 md:px-6 max-w-3xl">
+        <a href="/blog/" class="inline-flex items-center text-slate-400 hover:text-igt-cyan transition-colors text-sm mb-8">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Blog
+        </a>
+        <p class="text-igt-cyan font-semibold text-sm tracking-wide uppercase mb-4">{category}</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">{title}</h1>
+        <div class="flex items-center gap-4 text-slate-400 text-sm">
+          <span>{author}</span>
+          <span class="text-slate-600 mx-2">|</span>
+          <time datetime={publishDate}>{new Date(publishDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+          <span class="text-slate-600 mx-2">|</span>
+          <span>{readTime}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post Body -->
+    <div class="container mx-auto px-6 md:px-6 max-w-3xl py-12 md:py-16">
+      <div class="blog-content">
+        <slot />
+      </div>
+
+      <!-- Post CTA -->
+      <div class="mt-16 bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Talk Security?</h2>
+        <p class="text-slate-400 mb-6 max-w-lg mx-auto">Our engineering team can walk you through the right solution for your environment.</p>
+        <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+      </div>
+
+      <!-- Back to Blog -->
+      <div class="mt-8 text-center">
+        <a href="/blog/" class="text-igt-cyan hover:text-cyan-300 transition-colors font-medium">
+          View All Posts
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
