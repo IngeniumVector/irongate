@@ -20,7 +20,7 @@ const logos = [
           <div class="flex items-center justify-center px-4" style="height:56px;">
             <img src={`/images/logos/${logo.file}`} alt={logo.alt} style="height:40px;width:auto;max-width:140px;object-fit:contain;" width={logo.width} height={logo.height} loading="lazy" />
           </div>
-          <a href={logo.url} target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 hover:text-cyan-400 transition-colors">{logo.url.replace('https://', '').replace('www.', '').replace(/\/$/, '')}</a>
+          <a href={logo.url} target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-cyan-400 transition-colors">{logo.url.replace('https://', '').replace('www.', '').replace(/\/$/, '')}</a>
         </div>
       ))}
     </div>
