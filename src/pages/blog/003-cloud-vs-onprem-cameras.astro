@@ -1,0 +1,120 @@
+---
+/**
+ * Blog Post: Cloud vs On-Premise Security Cameras: What the 150,000 Camera Breach Teaches Us
+ * irongate.world/blog/003-cloud-vs-onprem-cameras/
+ */
+
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
+---
+
+<BlogLayout
+  title="Cloud vs On-Premise Security Cameras: What the 150,000 Camera Breach Teaches Us"
+  description="The 2021 Verkada breach exposed 150,000 live camera feeds. Learn the key differences between cloud and on-premise security cameras and what to ask vendors."
+  headline="Cloud vs On-Premise Security Cameras: What the 150,000 Camera Breach Teaches Us"
+  publishDate="2026-03-27"
+  category="Security"
+  readTime="5 min"
+  tags={["cloud vs on-premise cameras", "security camera data privacy", "Verkada breach", "on-premise surveillance", "data sovereignty"]}
+>
+
+  <p>In March 2021, hackers accessed 150,000 live camera feeds from hospitals, schools, jails, and factories, including Tesla and Cloudflare facilities. They also accessed full video archives stored on the vendor's cloud platform.</p>
+
+  <p>The cameras were working exactly as designed. That was the problem.</p>
+
+  <h2>What Happened</h2>
+
+  <p>The breach targeted Verkada, a cloud-based security camera company headquartered in San Mateo, California. According to the Federal Trade Commission's complaint and Verkada's own incident report, here's what occurred:</p>
+
+  <p>Attackers discovered credentials for a "Super Admin" account, a support-level access tier that provided full control over customer cameras across the entire platform. Using these credentials, they accessed live feeds and archived video from customer organizations including hospitals, psychiatric facilities, schools, police departments, and corporate offices.</p>
+
+  <p>The FTC's investigation found that Verkada failed to require unique and complex passwords, failed to adequately encrypt customer data, and failed to implement secure network controls. The breach wasn't the result of a sophisticated zero-day exploit. It was a misconfigured support server with credentials that gave access to everything.</p>
+
+  <p>The consequences were significant. The FTC required Verkada to implement a thorough information security program and pay a $2.95 million penalty, the largest fine the FTC had obtained for a CAN-SPAM violation at the time. The Department of Justice also sued the company separately for sending more than 30 million unsolicited commercial emails in violation of the CAN-SPAM Act.</p>
+
+  <p>According to independent testing cited in public reporting, Verkada's facial recognition system showed a 15 to 85 percent false positive rate depending on conditions, raising additional questions about the accuracy of AI features marketed alongside the cloud platform.</p>
+
+  <h2>The Architecture Problem</h2>
+
+  <p>The Verkada breach illustrates a structural vulnerability specific to cloud-only security architectures. Understanding the distinction matters for any organization evaluating camera systems.</p>
+
+  <p>In a cloud-only model, video from your cameras travels through the vendor's servers. The vendor controls access to your footage. The vendor manages the admin credentials. The vendor decides who has "Super Admin" access, and how that access is secured.</p>
+
+  <p>This creates a single point of failure that has nothing to do with your own security practices. Your IT team can follow every best practice in the book, and if the vendor's support infrastructure is misconfigured, your footage is exposed.</p>
+
+  <p>Cloud-only also means subscription dependency. Your video lives on someone else's infrastructure, and accessing it requires an active subscription. If you cancel or the vendor changes terms, your access to your own recorded footage can disappear.</p>
+
+  <p>None of this means cloud is inherently insecure. It means cloud-only architectures concentrate risk in the vendor's infrastructure, and the buyer has limited visibility into how that risk is managed.</p>
+
+  <!-- Stats callout -->
+  <div class="grid grid-cols-2 gap-6 my-8 text-center">
+    <div class="bg-slate-900 border border-slate-800 rounded-lg p-6">
+      <div class="text-2xl font-bold text-igt-cyan">150,000</div>
+      <div class="text-slate-400 text-sm mt-1">Cameras exposed in 2021 breach</div>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 rounded-lg p-6">
+      <div class="text-2xl font-bold text-igt-cyan">$2.95M</div>
+      <div class="text-slate-400 text-sm mt-1">FTC penalty against Verkada</div>
+    </div>
+  </div>
+
+  <h2>On-Premise: What It Actually Means</h2>
+
+  <p>On-premise security means your video stays on your network, stored on your hardware, controlled by your team.</p>
+
+  <p>There are no subscription fees for accessing your own footage. The data doesn't traverse third-party servers. Admin access is managed by your IT department, not by a vendor's support team with "Super Admin" privileges that may or may not be adequately secured.</p>
+
+  <p>For organizations with existing network infrastructure, on-premise storage integrates with your current security posture. Your firewall rules, access controls, and monitoring tools apply to video data the same way they apply to everything else on your network.</p>
+
+  <p>The strongest form of on-premise security is air-gapped deployment, where the camera system operates on a physically isolated network with no internet connectivity. For facilities handling classified information, critical infrastructure, or sensitive operations, air-gapped systems eliminate the entire category of remote access vulnerabilities that enabled the 2021 breach.</p>
+
+  <p>On-premise does require local storage capacity and IT management overhead. For organizations with the infrastructure and personnel to manage it, this is a straightforward trade: you accept the management responsibility in exchange for complete control over your security data.</p>
+
+  <!-- Mid-article CTA -->
+  <div class="bg-slate-900 border border-slate-800 rounded-lg p-6 my-8">
+    <h4 class="text-igt-cyan font-semibold mb-2">Want to learn more about on-premise architecture?</h4>
+    <p class="text-slate-300 text-sm mb-4">Iron Gate Technologies builds on-premise and air-gapped systems exclusively. Every system stores footage locally on hardware you own.</p>
+    <ButtonPrimary href="/booking" text="Book a Security Assessment" />
+  </div>
+
+  <h2>Why Iron Gate Technologies Builds On-Premise Only</h2>
+
+  <p>The subscription model is the business logic behind cloud-only security. When your video lives on someone else's servers, you pay monthly for the privilege of accessing your own footage. Stop paying and access disappears. The vendor's recurring revenue depends on your continued dependency.</p>
+
+  <p>Iron Gate Technologies rejected that model entirely. Every IGT system stores footage locally, on hardware you own, on your network. There is no monthly subscription to access your recordings. There is no cloud dependency that turns your security system into a recurring bill. The footage is yours from the moment it is captured.</p>
+
+  <p>This is not a philosophical stance. It is an engineering decision rooted in how security systems actually get used. When a facility manager needs to pull footage from last Tuesday at 2 AM, that request should not depend on an internet connection, a subscription status check, or a third-party server's availability. It should depend on walking to the local storage system and retrieving the file.</p>
+
+  <p>For organizations in compliance environments where data residency matters (HIPAA, FERPA, CJIS), on-premise is not a preference. It is a requirement. For government and defense agencies where cloud-only architectures can be disqualifying, on-premise is the only path to procurement eligibility. For any organization that wants guaranteed access to its footage regardless of vendor business continuity, on-premise means the footage survives even if the vendor does not.</p>
+
+  <p>Iron Gate Technologies builds on-premise and air-gapped systems exclusively. Learn more about <a href="/about/">Iron Gate Technologies' approach to data security</a> or explore our <a href="/solutions/government/">government and defense security solutions</a>.</p>
+
+  <h2>Questions to Ask Your Security Vendor</h2>
+
+  <p>Before signing a contract for any security camera system, these questions separate vendors who respect your data sovereignty from those who don't.</p>
+
+  <!-- Callout box -->
+  <div class="bg-slate-900 border border-slate-800 rounded-lg p-6 my-8">
+    <h4 class="text-igt-cyan font-semibold mb-2">Five Questions for Your Security Vendor</h4>
+    <p class="text-slate-300 text-sm mb-0">Use these during your next vendor evaluation to assess data sovereignty and architectural risk.</p>
+  </div>
+
+  <p><strong>"Where does my video physically reside?"</strong> If the answer is "our cloud" and there's no local storage option, your footage lives on someone else's infrastructure, subject to their security practices.</p>
+
+  <p><strong>"Who has admin access to my cameras?"</strong> Ask specifically about support-tier access. How many people at the vendor have the ability to view your live feeds? What audit controls exist? The 2021 breach demonstrated that broad internal access without adequate controls creates risk that customers may never see until it's too late.</p>
+
+  <p><strong>"What happens to my footage if I cancel my subscription?"</strong> If footage is cloud-only and you stop paying, does it get deleted? Archived? Returned to you? The answer reveals whether you own your data or rent it.</p>
+
+  <p><strong>"Can my system operate fully disconnected from the internet?"</strong> If the answer is no, then every vulnerability in the vendor's cloud infrastructure is your vulnerability too. A system that requires internet connectivity to function cannot provide security when that connectivity is compromised.</p>
+
+  <p><strong>"Where is your equipment manufactured, and who controls the firmware?"</strong> This connects directly to NDAA compliance and supply chain security. If the vendor can't answer clearly, the supply chain may include components from manufacturers banned under Section 889.</p>
+
+  <h2>Your Data, Your Choice</h2>
+
+  <p>The 150,000-camera breach wasn't a failure of cameras. It was a failure of architecture. Concentrating access to 150,000 customer camera systems behind a single set of credentials, on a single vendor platform, with insufficient access controls, created a risk that no individual customer could mitigate.</p>
+
+  <p>On-premise security doesn't eliminate all risk. Nothing does. But it moves control back to the organization that owns the cameras, the footage, and the responsibility for protecting both.</p>
+
+  <p><a href="/contact/">Request an on-premise consultation</a> to discuss which architecture fits your security requirements.</p>
+
+</BlogLayout>
