@@ -7,8 +7,8 @@ import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
 ---
 
 <BaseLayout 
-  title="Autonomous Patrol Robots" 
-  description="Self-navigating patrol units with AI-powered threat detection. Stair-climbing robots that provide 24/7 security coverage for large facilities."
+  title="Autonomous Patrol Robots for Industrial Facilities" 
+  description="Patrol robots that navigate doors, gates, stairs, and elevators in industrial facilities. AI weapon detection, 24/7 autonomous operation. American-made."
 >
   <script type="application/ld+json" is:inline>
 
@@ -17,7 +17,7 @@ import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
   "@type": "Product",
   "@id": "https://irongate.world/solutions/autonomous-robots/#product",
   "name": "ES Iron Gate Technologies Autonomous Patrol Robot",
-  "description": "Self-navigating security unit providing 24/7 mobile surveillance. Climbs stairs, identifies weapons using AI-powered threat detection, and operates autonomously on solar power.",
+  "description": "Self-navigating security patrol robot for industrial facilities. Climbs stairs, navigates doors and gates, identifies weapons using AI-powered threat detection, and operates autonomously on solar power. Built to overcome access barriers in warehouses, distribution centers, and multi-story commercial buildings.",
   "brand": {
     "@id": "https://irongate.world/#organization"
   },
@@ -34,7 +34,12 @@ import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
     {
       "@type": "PropertyValue",
       "name": "Navigation",
-      "value": "Self-navigating, stair-climbing"
+      "value": "Self-navigating, stair-climbing, door and gate traversal"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Facility Access",
+      "value": "Navigates doors, gates, elevators, ramps, and stairs in industrial facilities"
     },
     {
       "@type": "PropertyValue",
@@ -88,7 +93,15 @@ import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
       "name": "Can the patrol robots climb stairs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Iron Gate's Autonomous Patrol Robots are built with stair-climbing capability, allowing them to patrol multi-level facilities including parking garages, stairwells, and tiered outdoor environments."
+        "text": "Yes. Iron Gate's Autonomous Patrol Robots are built with stair-climbing capability, allowing them to patrol multi-level facilities including parking garages, stairwells, and tiered outdoor environments. The robots handle standard commercial staircases and loading dock ramps without modification, maintaining patrol continuity across all levels of a building."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the robots navigate doors, gates, and elevators in industrial facilities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Iron Gate patrol robots integrate with building access control and elevator systems to pass through secured doors, security gates, and freight elevators autonomously. This allows continuous patrol coverage across multiple zones and floors without human assistance. The robots communicate directly with building management systems to request access and coordinate movement."
       }
     },
     {
@@ -96,7 +109,7 @@ import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
       "name": "How do the robots detect threats?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The robots use AI-powered computer vision for weapon identification and threat detection. They analyze their surroundings continuously and send real-time alerts when potential threats are identified. All AI systems comply with ISO/IEC 42001."
+        "text": "The robots use AI-powered computer vision for weapon identification and threat detection. They analyze their surroundings continuously and send real-time alerts when potential threats are identified. All AI systems comply with ISO/IEC 42001. Detection data is processed onboard, and alerts include photo evidence sent directly to security personnel."
       }
     },
     {
@@ -104,7 +117,7 @@ import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
       "name": "Do the robots need human operators?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The robots operate autonomously, following programmed patrol routes and making real-time navigation decisions. They recharge via solar power and can run 24/7 without human intervention. Human operators can override and direct the robots remotely when needed."
+        "text": "No. The robots operate autonomously, following programmed patrol routes and making real-time navigation decisions. They recharge via solar power and can run 24/7 without human intervention. Human operators can override and direct the robots remotely when needed. All patrol activity is logged and accessible through a centralized monitoring dashboard."
       }
     },
     {
@@ -112,7 +125,7 @@ import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
       "name": "What environments are the patrol robots designed for?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The robots are designed for warehouses, office campuses, parking structures, industrial facilities, and any environment that needs continuous mobile surveillance. They operate in both indoor and outdoor settings."
+        "text": "The robots are designed for warehouses, office campuses, parking structures, industrial facilities, and any environment that needs continuous mobile surveillance. They operate in both indoor and outdoor settings, handling varied terrain including concrete floors, asphalt lots, gravel paths, and graded ramps between elevation changes."
       }
     }
   ]
@@ -136,8 +149,8 @@ import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
     <div class="container mx-auto px-4 md:px-6 max-w-7xl relative z-10 py-24">
       <div class="max-w-3xl bg-black/75 backdrop-blur-sm rounded-2xl p-8 md:p-12">
         <p class="text-igt-cyan font-semibold mb-4 tracking-wide uppercase text-sm">Mobile Security</p>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Autonomous Patrol Robots</h1>
-        <p class="text-xl text-slate-300 mb-8 max-w-2xl">Self-navigating patrol units that provide 24/7 security coverage. Stair-climbing capability, AI-powered threat detection, and autonomous operation for facilities that never sleep.</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Autonomous Patrol Robots for Industrial Facilities</h1>
+        <p class="text-xl text-slate-300 mb-8 max-w-2xl">Self-navigating patrol robots that overcome doors, gates, stairs, and elevators in industrial environments. AI-powered weapon detection and 24/7 autonomous operation for facilities that never sleep.</p>
       </div>
     </div>
   </section>
@@ -145,7 +158,7 @@ import ButtonPrimary from '../../components/buttons/ButtonPrimary.astro';
   <!-- Answer-First Paragraph (GEO) -->
   <section class="bg-slate-950 pt-12 pb-0">
     <div class="container mx-auto px-4 md:px-6 max-w-7xl">
-      <p class="text-lg text-slate-300 max-w-3xl mx-auto text-center mb-12">The Iron Gate Autonomous Patrol Robot is a self-navigating security unit providing 24/7 mobile surveillance. It climbs stairs, identifies weapons using AI-powered threat detection, and operates autonomously on solar power. Built for facilities needing continuous perimeter coverage without staffing constraints.</p>
+      <p class="text-lg text-slate-300 max-w-3xl mx-auto text-center mb-12">In industrial facilities where doors, gates, stairs, and elevators block conventional security robots, Iron Gate's Autonomous Patrol Robot navigates every obstacle autonomously. AI-powered weapon detection, solar-powered 24/7 operation, and stair-climbing capability provide continuous mobile surveillance without staffing constraints. Manufactured in Holly Hill, Florida.</p>
     </div>
   </section>
 
@@ -184,14 +197,38 @@ Autonomous patrol robots eliminate these limitations. They execute identical pat
 
   <!-- Capabilities -->
   <Section>
-    <SectionHeader title="Capabilities" subtitle="Intelligence that moves" />
+    <SectionHeader title="Overcoming Facility Access Barriers" subtitle="Doors, gates, stairs, and elevators" />
+    <div class="max-w-4xl mx-auto mb-12">
+      <p class="text-slate-400 text-lg text-center mb-8">
+Industrial facilities present access challenges that stop most security robots. Locked doors, security gates, freight elevators, loading dock ramps, and multi-story stairwells create barriers between patrol zones. Iron Gate patrol robots are engineered to navigate these obstacles autonomously, maintaining continuous coverage across every area of your facility.
+</p>
+    </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <FeatureCard icon={`<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>`} title="Autonomous Navigation" description="Self-navigating patrol units that learn facility layouts. Automatic path planning and obstacle avoidance. No human operator required for routine patrols." />
-      <FeatureCard icon={`<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v18M16 3v18M8 7h8M8 11h8M8 15h8M8 19h8"/></svg>`} title="Stair Climbing" description="Navigate multi-level facilities without elevators. Tank-style treads or specialized mechanisms for stairs and ramps. Access areas human guards find difficult or dangerous." />
-      <FeatureCard icon={`<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>`} title="Weapon Detection" description="AI-powered computer vision identifies firearms and other weapons. Instant alerts with photo evidence. Threat assessment and automatic response protocols. All AI detection systems are developed in compliance with ISO/IEC 42001, the international standard for AI management systems." />
-      <FeatureCard icon={`<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>`} title="Extended WiFi Coverage" description="Each unit extends network coverage up to 16 acres. Mobile mesh networking for large facilities. Maintain connectivity in previously dead zones." />
-      <FeatureCard icon={`<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg>`} title="Environmental Sensors" description="Detect smoke, gas leaks, and temperature anomalies. Early warning system for fires and hazardous conditions. Integration with building management systems." />
-      <FeatureCard icon={`<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>`} title="Two-Way Audio" description="Remote communication through onboard speakers and microphones. Security personnel can address trespassers. Verbal warnings before escalating response." />
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800 hover:border-igt-cyan transition-colors">
+        <h3 class="text-xl font-semibold text-white mb-3">Door and Gate Navigation</h3>
+        <p class="text-slate-400">Patrol robots interact with access control systems to pass through secured doors and gates without human assistance. Integration with building management systems allows autonomous entry and exit across restricted zones, loading docks, and perimeter gates.</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800 hover:border-igt-cyan transition-colors">
+        <h3 class="text-xl font-semibold text-white mb-3">Elevator Integration</h3>
+        <p class="text-slate-400">Multi-floor patrol capability through elevator system integration. Robots request and board freight or passenger elevators to move between floors autonomously, covering entire buildings from basement storage to rooftop mechanical rooms.</p>
+      </div>
+      <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800 hover:border-igt-cyan transition-colors">
+        <h3 class="text-xl font-semibold text-white mb-3">Stair and Ramp Traversal</h3>
+        <p class="text-slate-400">Specialized tread systems climb stairs and ramps that block wheeled security platforms. Patrol robots access parking garages, mezzanines, loading docks, and tiered outdoor environments where elevators are unavailable or impractical.</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Core Capabilities -->
+  <Section>
+    <SectionHeader title="Core Capabilities" subtitle="Intelligence that moves" />
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>" title="Autonomous Navigation" description="Self-navigating patrol units that learn facility layouts. Automatic path planning and obstacle avoidance. No human operator required for routine patrols." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v18M16 3v18M8 7h8M8 11h8M8 15h8M8 19h8"/></svg>" title="Stair Climbing" description="Navigate multi-level facilities without elevators. Tank-style treads or specialized mechanisms for stairs and ramps. Access areas human guards find difficult or dangerous." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>" title="Weapon Detection" description="AI-powered computer vision identifies firearms and other weapons. Instant alerts with photo evidence. Threat assessment and automatic response protocols. All AI detection systems are developed in compliance with ISO/IEC 42001, the international standard for AI management systems." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>" title="Extended WiFi Coverage" description="Each unit extends network coverage up to 16 acres. Mobile mesh networking for large facilities. Maintain connectivity in previously dead zones." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg>" title="Environmental Sensors" description="Detect smoke, gas leaks, and temperature anomalies. Early warning system for fires and hazardous conditions. Integration with building management systems." />
+      <FeatureCard icon="<svg class="w-8 h-8 text-igt-cyan" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>" title="Two-Way Audio" description="Remote communication through onboard speakers and microphones. Security personnel can address trespassers. Verbal warnings before escalating response." />
     </div>
   </Section>
 
@@ -295,8 +332,8 @@ Specifications vary by model and configuration. Contact us for detailed specs ma
         <p class="text-slate-400">Patrol large facilities 24/7 without fatigue. Multiple robots cover more ground than human guards at lower cost. Consistent, repeatable security checks with documented proof.</p>
       </div>
       <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800 hover:border-igt-cyan transition-colors">
-        <h3 class="text-xl font-semibold text-white mb-3">Warehouses &amp; Distribution</h3>
-        <p class="text-slate-400">Monitor vast warehouse floors and outdoor yards. Detect unauthorized access after hours. Verify facility security before staff arrival. Reduce liability with proactive threat detection.</p>
+        <h3 class="text-xl font-semibold text-white mb-3">Warehouses and Industrial Facilities</h3>
+        <p class="text-slate-400">Monitor vast warehouse floors, navigate loading dock gates, and patrol outdoor yards. Robots traverse doors between zones and cover areas where fixed cameras leave blind spots. Detect unauthorized access after hours and verify facility security before staff arrival.</p>
       </div>
       <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-800 hover:border-igt-cyan transition-colors">
         <h3 class="text-xl font-semibold text-white mb-3">Educational Institutions</h3>
@@ -324,28 +361,35 @@ Specifications vary by model and configuration. Contact us for detailed specs ma
         Can the patrol robots climb stairs?
         <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
       </summary>
-      <p class="text-slate-300 mt-4">Yes. Iron Gate's Autonomous Patrol Robots are built with stair-climbing capability, allowing them to patrol multi-level facilities including parking garages, stairwells, and tiered outdoor environments.</p>
+      <p class="text-slate-300 mt-4">Yes. Iron Gate's Autonomous Patrol Robots are built with stair-climbing capability, allowing them to patrol multi-level facilities including parking garages, stairwells, and tiered outdoor environments. The robots handle standard commercial staircases and loading dock ramps without modification, maintaining patrol continuity across all levels of a building.</p>
+    </details>
+    <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
+      <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
+        Can the robots navigate doors, gates, and elevators in industrial facilities?
+        <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p class="text-slate-300 mt-4">Yes. Iron Gate patrol robots integrate with building access control and elevator systems to pass through secured doors, security gates, and freight elevators autonomously. This allows continuous patrol coverage across multiple zones and floors without human assistance. The robots communicate directly with building management systems to request access and coordinate movement.</p>
     </details>
     <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
       <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
         How do the robots detect threats?
         <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
       </summary>
-      <p class="text-slate-300 mt-4">The robots use AI-powered computer vision for weapon identification and threat detection. They analyze their surroundings continuously and send real-time alerts when potential threats are identified. All AI systems comply with ISO/IEC 42001.</p>
+      <p class="text-slate-300 mt-4">The robots use AI-powered computer vision for weapon identification and threat detection. They analyze their surroundings continuously and send real-time alerts when potential threats are identified. All AI systems comply with ISO/IEC 42001. Detection data is processed onboard, and alerts include photo evidence sent directly to security personnel.</p>
     </details>
     <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
       <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
         Do the robots need human operators?
         <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
       </summary>
-      <p class="text-slate-300 mt-4">No. The robots operate autonomously, following programmed patrol routes and making real-time navigation decisions. They recharge via solar power and can run 24/7 without human intervention. Human operators can override and direct the robots remotely when needed.</p>
+      <p class="text-slate-300 mt-4">No. The robots operate autonomously, following programmed patrol routes and making real-time navigation decisions. They recharge via solar power and can run 24/7 without human intervention. Human operators can override and direct the robots remotely when needed. All patrol activity is logged and accessible through a centralized monitoring dashboard.</p>
     </details>
     <details class="bg-slate-900 border border-slate-800 rounded-lg p-6 group">
       <summary class="cursor-pointer font-semibold text-white flex justify-between items-center">
         What environments are the patrol robots designed for?
         <span class="text-igt-cyan transition-transform group-open:rotate-45">+</span>
       </summary>
-      <p class="text-slate-300 mt-4">The robots are designed for warehouses, office campuses, parking structures, industrial facilities, and any environment that needs continuous mobile surveillance. They operate in both indoor and outdoor settings.</p>
+      <p class="text-slate-300 mt-4">The robots are designed for warehouses, office campuses, parking structures, industrial facilities, and any environment that needs continuous mobile surveillance. They operate in both indoor and outdoor settings, handling varied terrain including concrete floors, asphalt lots, gravel paths, and graded ramps between elevation changes.</p>
     </details>
     </div>
   </Section>
