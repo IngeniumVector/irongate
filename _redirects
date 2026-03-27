@@ -1,0 +1,21 @@
+# Iron Gate Technologies - Legacy URL Redirects
+# Fix dual-website indexing: Google indexes old HTML pages, redirect to new Astro pages
+# Updated: 2026-03-26 (added GA4 404 redirects: book-online-1, shop, blog trailing slash)
+
+/about-us.html /about/ 301
+/contact-us.html /contact/ 301
+/privacy-policy.html /privacy 301
+/terms-of-service.html /terms 301
+/index.html / 301
+/blog/index.php /blog/ 301
+
+# Legacy paths returning 404 (found in crawl data)
+/company.html /about/ 301
+/contact.html /contact/ 301
+
+# GA4 404 triage (2026-03-26, SEO-007)
+/book-online-1.html /booking/ 301
+/shop.html /solutions/ 301
+
+# Trailing slash normalization
+/blog /blog/ 301
